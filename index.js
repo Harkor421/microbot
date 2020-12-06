@@ -945,7 +945,7 @@ if (message.content.startsWith(prefix + "feedback")) {
 
 
 
-Client.login("NzY0NzIxMDA3NzQyOTQzMjMy.X4KX8A.PWNlbeLA9FNg9kBaGdncLS_j_cg"); 
+Client.login(process.env.TOKEN); 
 
 
 

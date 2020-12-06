@@ -1,1 +1,1 @@
-Worker: node botmain.js 
+Worker: node index.js 
