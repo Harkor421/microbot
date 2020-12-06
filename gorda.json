@@ -1,0 +1,4 @@
+{
+  "mongoPass": "mongodb://sekesie:Sekesie428@microhubbot-shard-00-00.swivs.mongodb.net:27017,microhubbot-shard-00-01.swivs.mongodb.net:27017,microhubbot-shard-00-02.swivs.mongodb.net:27017/<dbname>?ssl=true&replicaSet=atlas-ixo9k2-shard-0&authSource=admin&retryWrites=true&w=majority"
+    
+}
