@@ -31,7 +31,7 @@ console.log("Conectado a base de datos");
 Client.on('ready', (oldmember, newmember) => {
     console.log("Listo y operando");
     Client.user.setActivity("!ayuda", {
-        type: "STREAMING",
+        type: "PLAYING",
         url: "https://www.twitch.tv/harkorfn"      
     });
 
