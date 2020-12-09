@@ -40,7 +40,7 @@ Client.on('ready', (oldmember, newmember) => {
 
 // Add rol de reaccion consulta
 
-Client.on("messageReactionAdd", async (reaction, user, message) => {// Reacciones de Matchmaking
+Client.on("messageReactionAdd", async (reaction, user, message) => {
     // If a message gains a reaction and it is uncached, fetch and cache the message.
     // You should account for any errors while fetching, it could return API errors if the resource is missing.
     if (reaction.message.partial) await reaction.message.fetch(); // Partial messages do not contain any content so skip them.
@@ -114,7 +114,7 @@ Client.on("messageReactionAdd", async (reaction, user, message) => {// Reaccione
 })
 
 
-Client.on("messageReactionAdd", async (reaction, user, message) => {// Reacciones de Matchmaking
+Client.on("messageReactionAdd", async (reaction, user, message) => {
   // If a message gains a reaction and it is uncached, fetch and cache the message.
   // You should account for any errors while fetching, it could return API errors if the resource is missing.
   if (reaction.message.partial) await reaction.message.fetch(); // Partial messages do not contain any content so skip them.
@@ -627,7 +627,7 @@ if (message.content.startsWith(prefix + "cs")) {
   }
   
 // Creador de mensajes 2 
-  if (message.content.startsWith(prefix + "botmsg")) { 
+  if (message.content.startsWith(prefix + "718923789123712983879")) { 
     var channel = Client.channels.cache.get("768702132169605130")  
     channel.send("Escribe el titulo").then(() => {
       const filter = m => m.author.id == message.author.id //this ensures that it's waiting messages from the person who sent the message
@@ -668,7 +668,7 @@ if (message.content.startsWith(prefix + "cs")) {
     })
 }
 
-if (message.content.startsWith(prefix + "msg2")) { 
+if (message.content.startsWith(prefix + "78934789238942389")) { 
   var channel = Client.channels.cache.get("768702132169605130")  
   channel.send("Escribe el titulo").then(() => {
     const filter = m => m.author.id == message.author.id //this ensures that it's waiting messages from the person who sent the message
@@ -704,10 +704,10 @@ if (message.content.startsWith(prefix + "msg2")) {
 }
 
 
-if (message.content.startsWith(prefix + "ingresarc")) {
+if (message.content.startsWith(prefix + "781273618723617823612783")) {
   
   
-  message.channel.send("Escribe el codigo a ingresar en la base de datos.").then(() => {
+  message.channel.send("Escribe el código a ingresar en la base de datos.").then(() => {
     const filter = m => m.author.id == message.author.id //this ensures that it's waiting messages from the person who sent the message
     message.channel.awaitMessages(filter, {time: 600000, max: 1, errors: ['time']}) //the time variable is the amount of milliseconds it should wait for, change this accordingly
     .then(async messages => {
@@ -878,7 +878,7 @@ if (message.content.startsWith(prefix + "opinion")) {
     }
       
 // Mensaje de Reacciones de Consulta
-    if (message.content.startsWith(prefix + "ticket")) { //Creador de ticket
+    if (message.content.startsWith(prefix + "23894723894278943274893274")) { //Creador de ticket
         let channel = Client.channels.cache.get("765256854610640896"); //Discord channel id Matchmaking 1v1 boxfight
         const embed3 = new Discord.MessageEmbed()
             .setColor('#fffafa')
@@ -891,7 +891,7 @@ if (message.content.startsWith(prefix + "opinion")) {
         })
     }
 
-    if (message.content.startsWith(prefix + "perra")) { //Creador de ticket
+    if (message.content.startsWith(prefix + "3724893274892234324")) { //Creador de ticket
       let channel = Client.channels.cache.get("766447645291708426"); //Discord channel id Matchmaking 1v1 boxfight
       channel.send((`
       
