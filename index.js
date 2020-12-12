@@ -12,6 +12,7 @@ const WS = require('./ws');
 const codigos = require("./codigo.js")
 const config = require('./config.json');
 const { db } = require("./mcn.js");
+const e = require("express");
 var ws = new WS(config.ws.token, config.ws.port, Client);
 
 
@@ -75,7 +76,7 @@ Client.on("messageReactionAdd", async (reaction, user, message) => {
           .setThumbnail('https://lh3.googleusercontent.com/xzIAMw2AJld8rJoTFoR-xhEt1ItJChSA5cXoIDyEWjooRV5P0mFxFYzbJ-dIN-6TMdivKxYIgncc528tKfgkeJ_R2d4MxbOANYscT0AYe8YkaGpRN0QGQBz35TRM1rgAEdSjqkCU46gNje3V4A4AOCbYMVChdoHRS9yOpTH4OSwM2g49Ywr6zYaHvx5UsB-yZ8la4IafzeNel9QVPOkrvVQR6BrFfKASp-fccjefqTLH-x6tPGQQE7T3fR7iHZOACbGfEaHBwLp8XikvCVnWsZhJY91J7lix8m5SFlQWomy3zK_r6mgJE6q5LDW8ruBRz8JDNwy-JbnjgeQlmwsEKssypbvCb07YGC7pS10lNVCCAQ5HOpAbuY8B0m9KhzHDGPzaFi8o3Ul_GHa9HKDYSKfAs8ahPFyyjD7VLQS5P3_X2huWcp5by7KzL0xUhfy7UPIErVAnMoDJxy9NMhWO4qY6mgVjjK-6pWlAC6-Jn68iArsn4PtnY-rJThlpT4xVURTKXqfsAE68_OJaWh8UpLa5ghRSaiB-Xzqr91K4Imt1hgqFMaYKkN806j_rrqdsotI7umiGNv8Li3M7O_xFug9rn85O-LpIpiM9nhN8FDYItN9PfTaCdSdBW78D7tNmkWS_pnFaxIdaNYXKrTORDLBqErHWRGltOFdg2cVmU3Hdk3W94z4uDw=s667-no?authuser=0')
           .addField('-', 'Escribe **!pcn** en el canal llamado "Empezar Consulta". Una vez hecho esto, nuestro bot te añadirá a un canal privado donde tendrás que responder a las preguntas que este te haga. Cabe destacar que, todas estas respuestas no se pueden cambiar, por ello, ten en cuenta que la respuesta que mandes, será la respuesta final. ', true)
           .setImage('https://i.ibb.co/JkjnZcy/gif3.gif')
-          await reaction.message.guild.members.cache.get(user.id).roles.add("766427685114740798"); // Box fight 2v2 role.
+          await reaction.message.guild.members.cache.get(user.id).roles.add("766427685114740798"); 
           return user.send(embedpcn).catch(() => console.log("Failed to send DM."));
         }
 
@@ -87,9 +88,9 @@ Client.on("messageReactionAdd", async (reaction, user, message) => {
           .setAuthor('Micro Hub', 'https://lh3.googleusercontent.com/AjX98AroEi5AdLxGVQpKdKKSUJBMXtHSCzv_eiHfCaJ0ggk2io-WQln85D1DvwTFSAAMdJW1ypBDu3SBvihUqdKYnyoE_0Dy5VnV-QCKdji8y4zRFTSxK5ZQkDSguyY2YeSsDdQ7nZNepuRD8olpeze1YQw-PolzklqRAJZJkYn1kuvVrEIwRJfAwmrQJkjdnfIyMiBSetOiHaRS-umJr9-czsjls_2sdsjVQJjkN7NUePyg0qmH5bSYvY5IM91gxaTHmLEpqSCAz96SgoNlyHmj9b6IQcj4IXB4UM3nDjGnW7_FCLoU8Cd9S5p2akhhQONbr8x6UfUtQhiLjTcowN0_oyhCyUkWfypQaOdReeKPHrqZApHrKHOr2YnRyJFLnDdO07WetbpZfKJfStL6vI6rMXBxoPvAaVO5LLepD_m6NYMKIYaPieYBl2MkYVjfz_VuYiKFhxgLQrUYKx3YY3GakfwCuur0Tfp-AWK4PiEcAYeKf0uLr6nb8NsLLNcGITaKtQwCPgVOFQ3qCPeHwo-0wJ7-9S0tIshLwORynzFPgsz60nhEHeTgNScoPSbXbyVdjrnbwL7jubgGnlGBX3w10yAPrnC-71gsjAox495LQpah0rquzXE74T6_66hFe5rqDVrVeoHkmDB-kiNHuYWz9n_gbDgYHmmYNZvhBzTGVyUCnoRS_w=s667-no?authuser=0', 'https://www.instagram.com/atlasleague/')
           .setDescription('Para empezar con el proceso de tu consulta sigue esta instruccion')
           .setThumbnail('https://lh3.googleusercontent.com/xzIAMw2AJld8rJoTFoR-xhEt1ItJChSA5cXoIDyEWjooRV5P0mFxFYzbJ-dIN-6TMdivKxYIgncc528tKfgkeJ_R2d4MxbOANYscT0AYe8YkaGpRN0QGQBz35TRM1rgAEdSjqkCU46gNje3V4A4AOCbYMVChdoHRS9yOpTH4OSwM2g49Ywr6zYaHvx5UsB-yZ8la4IafzeNel9QVPOkrvVQR6BrFfKASp-fccjefqTLH-x6tPGQQE7T3fR7iHZOACbGfEaHBwLp8XikvCVnWsZhJY91J7lix8m5SFlQWomy3zK_r6mgJE6q5LDW8ruBRz8JDNwy-JbnjgeQlmwsEKssypbvCb07YGC7pS10lNVCCAQ5HOpAbuY8B0m9KhzHDGPzaFi8o3Ul_GHa9HKDYSKfAs8ahPFyyjD7VLQS5P3_X2huWcp5by7KzL0xUhfy7UPIErVAnMoDJxy9NMhWO4qY6mgVjjK-6pWlAC6-Jn68iArsn4PtnY-rJThlpT4xVURTKXqfsAE68_OJaWh8UpLa5ghRSaiB-Xzqr91K4Imt1hgqFMaYKkN806j_rrqdsotI7umiGNv8Li3M7O_xFug9rn85O-LpIpiM9nhN8FDYItN9PfTaCdSdBW78D7tNmkWS_pnFaxIdaNYXKrTORDLBqErHWRGltOFdg2cVmU3Hdk3W94z4uDw=s667-no?authuser=0')
-          .addField('-', 'Escribe **!mpc** en el canal llamado "Empezar Consulta". Una vez hecho esto, nuestro bot te añadirá a un canal privado donde tendrás que responder a las preguntas que este te haga. Cabe destacar que, todas estas respuestas no se pueden cambiar, por ello, ten en cuenta que la respuesta que mandes, será la respuesta final. ', true)
+          .addField('-', 'Escribe **!mcn** en el canal llamado "Empezar Consulta". Una vez hecho esto, nuestro bot te añadirá a un canal privado donde tendrás que responder a las preguntas que este te haga. Cabe destacar que, todas estas respuestas no se pueden cambiar, por ello, ten en cuenta que la respuesta que mandes, será la respuesta final. ', true)
           .setImage('https://i.ibb.co/JkjnZcy/gif3.gif')
-          await reaction.message.guild.members.cache.get(user.id).roles.add("785165729996734485"); // Box fight 2v2 role.
+          await reaction.message.guild.members.cache.get(user.id).roles.add("785165729996734485"); 
           return user.send(embedpc).catch(() => console.log("Failed to send DM."));
         }
 
@@ -775,7 +776,27 @@ if (message.content.startsWith(prefix + "reclamar")) {
 
 if (message.content.startsWith(prefix + "opinion")) {
  
+  if (message.channel.id === 766040078874705962 ){
+
+  }
+  else{
+    if(message.channel.id === 766040259393093642){
+
+    }
+    else{
+
+    if(message.channel.id === 766079971729997834){
+
+    }
+  else {
+    if(message.channel.id === 765722137246957598){
+
+    }
+  }
+}
     
+  
+
     message.channel.send("Del 1 al 5, ¿Te solucionamos tu problema?").then(() => {
       const filter = m => m.author.id == message.author.id //this ensures that it's waiting messages from the person who sent the message
       message.channel.awaitMessages(filter, {time: 600000, max: 1, errors: ['time']}) //the time variable is the amount of milliseconds it should wait for, change this accordingly
@@ -849,8 +870,10 @@ if (message.content.startsWith(prefix + "opinion")) {
       })
       })
     })      
+  }
       
             }
+
 
 
 
