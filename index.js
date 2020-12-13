@@ -800,26 +800,13 @@ if (message.content.startsWith(prefix + "reclamar")) {
 
 
 if (message.content.startsWith(prefix + "opinion")) {
- 
-  if (message.channel.id === 766040078874705962 ){
 
+  if (!message.member.roles.cache.find(r => r.name === "opinion")) {
+    
   }
   else{
-    if(message.channel.id === 766040259393093642){
 
-    }
-    else{
-
-    if(message.channel.id === 766079971729997834){
-
-    }
-  else {
-    if(message.channel.id === 765722137246957598){
-
-    }
-  }
-}
-    
+    message.guild.members.cache.get(message.author.id).roles.remove("787811286925967380")
   
 
     message.channel.send("Del 1 al 5, ¿Te solucionamos tu problema?").then(() => {
@@ -895,8 +882,8 @@ if (message.content.startsWith(prefix + "opinion")) {
       })
       })
     })      
-  }
-      
+  
+  }   
             }
 
 
