@@ -236,14 +236,39 @@ if (message.content.startsWith(prefix + "cs")) {
             var server = message.guild;
             const name = message.author.username; 
             const userid = message.author.id  
-            const everyone = "764721728228163624"     
+            const everyone = "764721728228163624"
+            const member = "766075999745474562" 
+            const memberplus = "766710168825888828"  
+            const fpsr = "765262764443828266"  
+            const mcnr = "785165729996734485"  
+            const pcnr = "766427685114740798"  
                console.log("Variables definidas")
                 server.channels.create(name, {
                     type: 'text',
-                    parent: '765722009984040982',
+                    parent: '765722009984040982', 
                     permissionOverwrites: [
                       {
                         id: everyone, // shortcut for @everyone role ID
+                        deny: 'VIEW_CHANNEL'
+                      },
+                      {
+                        id: member, // shortcut for @everyone role ID
+                        deny: 'VIEW_CHANNEL'
+                      },
+                      {
+                        id: memberplus, // shortcut for @everyone role ID
+                        deny: 'VIEW_CHANNEL'
+                      },
+                      {
+                        id: fpsr, // shortcut for @everyone role ID
+                        deny: 'VIEW_CHANNEL'
+                      },
+                      {
+                        id: mcnr, // shortcut for @everyone role ID
+                        deny: 'VIEW_CHANNEL'
+                      },
+                      {
+                        id: pcnr, // shortcut for @everyone role ID
                         deny: 'VIEW_CHANNEL'
                       },
                       {
