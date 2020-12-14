@@ -951,7 +951,7 @@ if (message.content.startsWith(prefix + "feedback")) {
   
   message.channel.send("Escribe tu recomendación de la manera más detallada posible.").then(() => {
     const filter = m => m.author.id == message.author.id //this ensures that it's waiting messages from the person who sent the message
-    channel.awaitMessages(filter, {time: 600000, max: 1, errors: ['time']}) //the time variable is the amount of milliseconds it should wait for, change this accordingly
+    message.channel.awaitMessages(filter, {time: 600000, max: 1, errors: ['time']}) //the time variable is the amount of milliseconds it should wait for, change this accordingly
     .then(async messages => {
 
       let idea = messages.first().content
