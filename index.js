@@ -953,16 +953,27 @@ if (message.content.startsWith(prefix + "feedback")) {
     const filter = m => m.author.id == message.author.id //this ensures that it's waiting messages from the person who sent the message
     channel.awaitMessages(filter, {time: 600000, max: 1, errors: ['time']}) //the time variable is the amount of milliseconds it should wait for, change this accordingly
     .then(async messages => {
+
       let idea = messages.first().content
-      let channel2 = Client.channels.cache.get("773373324884705331");
-      let embedPoll = new Discord.MessageEmbed()
-      .setTitle('**FEEDBACK** ')
-      .setDescription(idea)
-      .setColor('fffafa')
-      let msgEmbed = await channel2.send(embedPoll);
-      await msgEmbed.react('👍')
-      await msgEmbed.react('👎')
-      channel2.send(msgEmbed)
+       console.log ("codigo valido");
+       const guild= Client.guilds.cache.get('764721728228163624');
+    
+       var dmUser = message.author.id;
+     
+       var Member = guild.members.fetch(dmUser)
+       console.log("Variables definidas")
+       if (Member){
+         console.log("Anthony es cachon")
+         let channel2 = Client.channels.cache.get("773373324884705331");
+         let embedPoll = new Discord.MessageEmbed()
+         .setTitle('**FEEDBACK** ')
+         .setDescription(idea)
+         .setColor('fffafa')
+         let msgEmbed = await channel2.send(embedPoll);
+         await msgEmbed.react('👍')
+         await msgEmbed.react('👎')
+         channel2.send(msgEmbed)
+       }
 })
   })
 }
