@@ -268,7 +268,6 @@ if (message.content.startsWith(prefix + "cs")) {
                console.log("Variables definidas")
                 server.channels.create(name, {
                     type: 'text',
-                    parent: '765722009984040982', 
                     permissionOverwrites: [
                       {
                         id: everyone, // shortcut for @everyone role ID
