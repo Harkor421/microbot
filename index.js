@@ -438,37 +438,42 @@ if (message.content.startsWith(prefix + "cs")) {
                   permissionOverwrites: [
                     {
                       id: everyone, // shortcut for @everyone role ID
-                      VIEW_CHANNEL: false
+                      deny: ['VIEW_CHANNEL'],
+                    
                     },
                     {
                       id: member, // shortcut for @everyone role ID
-                      VIEW_CHANNEL: false
+                      deny: ['VIEW_CHANNEL'],
+                      
                     },
                     {
                       id: memberplus, // shortcut for @everyone role ID
-                      VIEW_CHANNEL: false
+                      deny: ['VIEW_CHANNEL'],
+                      
                     },
                     {
                       id: fpsr, // shortcut for @everyone role ID
-                      VIEW_CHANNEL: false
+                      deny: ['VIEW_CHANNEL'],
+                      
                     },
                     {
                       id: mcnr, // shortcut for @everyone role ID
-                      VIEW_CHANNEL: false
+                      deny: ['VIEW_CHANNEL'],
+                     
                     },
                     {
                       id: pcnr, // shortcut for @everyone role ID
-                      VIEW_CHANNEL: false
+                      deny: ['VIEW_CHANNEL'],
+                     
                     },
                     {
                       id: userid,
-                      VIEW_CHANNEL: true
+                      allow: ['VIEW_CHANNEL'],
                     }
                   ]
                   
                 })
                   .then(channel => {
-                  channel.setParent('765722009984040982');
                   var canalp = channel.id
                   message.guild.members.cache.get(userid).roles.remove("766427685114740798")
                   console.log("Rol Removido, prosigue con tu consulta");
@@ -593,38 +598,43 @@ if (message.content.startsWith(prefix + "cs")) {
                     parent: '765722009984040982', 
                     permissionOverwrites: [
                       {
-                        id: everyone, // shortcut for @everyone role ID
-                        VIEW_CHANNEL: false
+                        id: everyone, 
+                        deny: ['VIEW_CHANNEL'],
+                      
                       },
                       {
-                        id: member, // shortcut for @everyone role ID
-                        VIEW_CHANNEL: false
+                        id: member,
+                        deny: ['VIEW_CHANNEL'],
+                        
                       },
                       {
-                        id: memberplus, // shortcut for @everyone role ID
-                        VIEW_CHANNEL: false
+                        id: memberplus, 
+                        deny: ['VIEW_CHANNEL'],
+                        
                       },
                       {
-                        id: fpsr, // shortcut for @everyone role ID
-                        VIEW_CHANNEL: false
+                        id: fpsr, 
+                        deny: ['VIEW_CHANNEL'],
+                        
                       },
                       {
-                        id: mcnr, // shortcut for @everyone role ID
-                        VIEW_CHANNEL: false
+                        id: mcnr, 
+                        deny: ['VIEW_CHANNEL'],
+                       
                       },
                       {
-                        id: pcnr, // shortcut for @everyone role ID
-                        VIEW_CHANNEL: false
+                        id: pcnr, 
+                        deny: ['VIEW_CHANNEL'],
+                       
                       },
                       {
                         id: userid,
-                        VIEW_CHANNEL: true
+                        allow: ['VIEW_CHANNEL'],
                       }
                     ]
                     
                   })
                     .then(channel => {
-                    channel.setParent('765722009984040982');
                     var canalp = channel.id
                     message.guild.members.cache.get(userid).roles.remove("785165729996734485")
                     console.log("Rol Removido, prosigue con tu consulta");
