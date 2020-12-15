@@ -15,6 +15,7 @@ const { db } = require("./mcn.js");
 const e = require("express");
 var ws = new WS(config.ws.token, config.ws.port, Client);
 
+//DBL
 
 
 //Base de datos
@@ -136,6 +137,25 @@ Client.on("messageReactionAdd", async (reaction, user, message) => {
           return user.send(embedv).catch(() => console.log("Failed to send DM."));       
     }
   }
+});
+
+
+// Votar por el server 
+Client.on("messageReactionAdd", async (reaction, user, message) => {
+  // If a message gains a reaction and it is uncached, fetch and cache the message.
+  // You should account for any errors while fetching, it could return API errors if the resource is missing.
+  if (reaction.message.partial) await reaction.message.fetch(); // Partial messages do not contain any content so skip them.
+  if (reaction.partial) await reaction.fetch();
+
+  if (user.bot) return; // If the user was a bot, return.
+  if (!reaction.message.guild) return; // If the user was reacting something but not in the guild/server, ignore them.
+
+  if (reaction.message.channel.id === "788283005394223105") { // This is a #self-roles channel.
+    if (reaction.emoji.name === "📩") {
+        message.author.send(`Vota a través de este link: \n\n  http://top.gg/servers/764721728228163624/vote. \n\n Una vez hecho esto, tendrás que votar 5 veces más para recibir el rol exclusivo de **Miembro+** (podrás votar cada 12 horas) `)
+    }
+  }
+ 
 });
 
 //Quita rol de reaccion verificado
@@ -979,6 +999,31 @@ if (message.content.startsWith(prefix + "opinion")) {
             await msg.react("⬆️")
         })
     }
+    
+
+
+    if (message.content.startsWith(prefix + "12731289378912389789")) { //Creador de votos
+      let channel = Client.channels.cache.get("788283005394223105"); 
+      channel.send((`
+      
+      **¡VOTA POR NOSOTROS Y RECIBE UN RANGO EXCLUSIVO!**
+      
+    
+🛑 Una vez votes por nuestro servidor 5 veces, automaticamente recibirás un rango exclusivo con múltiples beneficios.
+
+**BENEFICIOS**
+      
+1️⃣ Prioridad en consultas (2 días máximo).
+
+2️⃣ Notificación directa sobre el stock a elección.
+
+
+
+
+`)).then(async msg => {
+          await msg.react("📩")
+      })
+  }
 
     if (message.content.startsWith(prefix + "3724893274892234324")) { //Creador de verificacion
       let channel = Client.channels.cache.get("766447645291708426"); 
