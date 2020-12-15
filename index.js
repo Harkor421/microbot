@@ -199,10 +199,6 @@ Client.on('message', async (message) => {
     if (!message.content.startsWith(prefix)) return;
 
 
-    let embed = message.embeds[0];
-    if (message.author.id == embed && embed.fields && embed.fields[0].title == 'Hay stock') {
-      message.channel.send("@here");
-    } 
   
   
 
