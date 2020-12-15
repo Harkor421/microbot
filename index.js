@@ -273,26 +273,32 @@ if (message.content.startsWith(prefix + "cs")) {
                       {
                         id: everyone, // shortcut for @everyone role ID
                         deny: ['VIEW_CHANNEL'],
+                        deny: ['SEND_MESSAGES'],
                       },
                       {
                         id: member, // shortcut for @everyone role ID
                         deny: ['VIEW_CHANNEL'],
+                        deny: ['SEND_MESSAGES'],
                       },
                       {
                         id: memberplus, // shortcut for @everyone role ID
                         deny: ['VIEW_CHANNEL'],
+                        deny: ['SEND_MESSAGES'],
                       },
                       {
                         id: fpsr, // shortcut for @everyone role ID
                         deny: ['VIEW_CHANNEL'],
+                        deny: ['SEND_MESSAGES'],
                       },
                       {
                         id: mcnr, // shortcut for @everyone role ID
                         deny: ['VIEW_CHANNEL'],
+                        deny: ['SEND_MESSAGES'],
                       },
                       {
                         id: pcnr, // shortcut for @everyone role ID
                         deny: ['VIEW_CHANNEL'],
+                        deny: ['SEND_MESSAGES'],
                       },
                       {
                         id: userid,
