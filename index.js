@@ -402,13 +402,38 @@ if (message.content.startsWith(prefix + "cs")) {
           const name = message.author.username; 
           const userid = message.author.id  
           const everyone = "764721728228163624"     
+          const member = "766075999745474562" 
+          const memberplus = "766710168825888828"  
+          const fpsr = "765262764443828266"  
+          const mcnr = "785165729996734485"  
+          const pcnr = "766427685114740798"  
              console.log("Variables definidas")
               server.channels.create(name, {
                   type: 'text',
-                  parent: '765722009984040982',
+                  parent: '765722009984040982', 
                   permissionOverwrites: [
                     {
                       id: everyone, // shortcut for @everyone role ID
+                      deny: 'VIEW_CHANNEL'
+                    },
+                    {
+                      id: member, // shortcut for @everyone role ID
+                      deny: 'VIEW_CHANNEL'
+                    },
+                    {
+                      id: memberplus, // shortcut for @everyone role ID
+                      deny: 'VIEW_CHANNEL'
+                    },
+                    {
+                      id: fpsr, // shortcut for @everyone role ID
+                      deny: 'VIEW_CHANNEL'
+                    },
+                    {
+                      id: mcnr, // shortcut for @everyone role ID
+                      deny: 'VIEW_CHANNEL'
+                    },
+                    {
+                      id: pcnr, // shortcut for @everyone role ID
                       deny: 'VIEW_CHANNEL'
                     },
                     {
@@ -533,13 +558,38 @@ if (message.content.startsWith(prefix + "cs")) {
             const name = message.author.username; 
             const userid = message.author.id  
             const everyone = "764721728228163624"     
+            const member = "766075999745474562" 
+            const memberplus = "766710168825888828"  
+            const fpsr = "765262764443828266"  
+            const mcnr = "785165729996734485"  
+            const pcnr = "766427685114740798"  
                console.log("Variables definidas")
                 server.channels.create(name, {
                     type: 'text',
-                    parent: '765722009984040982',
+                    parent: '765722009984040982', 
                     permissionOverwrites: [
                       {
                         id: everyone, // shortcut for @everyone role ID
+                        deny: 'VIEW_CHANNEL'
+                      },
+                      {
+                        id: member, // shortcut for @everyone role ID
+                        deny: 'VIEW_CHANNEL'
+                      },
+                      {
+                        id: memberplus, // shortcut for @everyone role ID
+                        deny: 'VIEW_CHANNEL'
+                      },
+                      {
+                        id: fpsr, // shortcut for @everyone role ID
+                        deny: 'VIEW_CHANNEL'
+                      },
+                      {
+                        id: mcnr, // shortcut for @everyone role ID
+                        deny: 'VIEW_CHANNEL'
+                      },
+                      {
+                        id: pcnr, // shortcut for @everyone role ID
                         deny: 'VIEW_CHANNEL'
                       },
                       {
@@ -922,9 +972,11 @@ if (message.content.startsWith(prefix + "opinion")) {
         const embed3 = new Discord.MessageEmbed()
             .setColor('#fffafa')
             .setTitle("¡Selecciona tu tema de consulta!")
-            .setDescription(`⬇️ **Bajones de FPS** \n\n 🖥️ **Adquirir un PC para cierto uso** \n\n ⬆️ **Mejorar tu PC actual** \n\n `)
+            .setDescription(`🖥️ **Adquirir un PC para cierto uso** \n\n ⬆️ **Mejorar tu PC actual** \n\n `)
         channel.send(embed3).then(async msg => {
-            await msg.react("⬇️")
+          /*/  
+          await msg.react("⬇️")
+          /**/
             await msg.react("🖥️")
             await msg.react("⬆️")
         })
