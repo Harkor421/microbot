@@ -272,31 +272,31 @@ if (message.content.startsWith(prefix + "cs")) {
                     permissionOverwrites: [
                       {
                         id: everyone, // shortcut for @everyone role ID
-                        VIEW_CHANNEL: false
+                        deny: ['VIEW_CHANNEL'],
                       },
                       {
                         id: member, // shortcut for @everyone role ID
-                        VIEW_CHANNEL: false
+                        deny: ['VIEW_CHANNEL'],
                       },
                       {
                         id: memberplus, // shortcut for @everyone role ID
-                        VIEW_CHANNEL: false
+                        deny: ['VIEW_CHANNEL'],
                       },
                       {
                         id: fpsr, // shortcut for @everyone role ID
-                        VIEW_CHANNEL: false
+                        deny: ['VIEW_CHANNEL'],
                       },
                       {
                         id: mcnr, // shortcut for @everyone role ID
-                        VIEW_CHANNEL: false
+                        deny: ['VIEW_CHANNEL'],
                       },
                       {
                         id: pcnr, // shortcut for @everyone role ID
-                        VIEW_CHANNEL: false
+                        deny: ['VIEW_CHANNEL'],
                       },
                       {
                         id: userid,
-                        VIEW_CHANNEL: true
+                        allow: ['VIEW_CHANNEL'],
                       }
                     ]
                     
