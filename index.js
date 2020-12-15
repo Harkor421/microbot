@@ -152,7 +152,7 @@ Client.on("messageReactionAdd", async (reaction, user, message) => {
 
   if (reaction.message.channel.id === "788283005394223105") { // This is a #self-roles channel.
     if (reaction.emoji.name === "📩") {
-        message.author.send(`Vota a través de este link: \n\n  http://top.gg/servers/764721728228163624/vote. \n\n Una vez hecho esto, tendrás que votar 5 veces más para recibir el rol exclusivo de **Miembro+** (podrás votar cada 12 horas) `)
+      await reaction.message.author.send(`Vota a través de este link: \n\n  http://top.gg/servers/764721728228163624/vote. \n\n Una vez hecho esto, tendrás que votar 5 veces más para recibir el rol exclusivo de **Miembro+** (podrás votar cada 12 horas) `)
     }
   }
  
