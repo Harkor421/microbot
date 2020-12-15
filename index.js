@@ -56,9 +56,9 @@ Client.on("messageReactionAdd", async (reaction, user, message) => {
             const embedfps = new Discord.MessageEmbed()
             .setColor('#fffafa')
             .setTitle('Sigue el siguiente formato')
-            .setAuthor('Micro Hub', 'https://i.ibb.co/LhqcLMN/logo.png', 'https://www.instagram.com/atlasleague/')
+            .setAuthor('Micro Hub', 'https://i.ibb.co/p0VRyXx/logo.png', 'https://www.instagram.com/microhubco/')
             .setDescription('Para empezar con el proceso de tu consulta sigue esta instruccion')
-            .setThumbnail('https://lh3.googleusercontent.com/xzIAMw2AJld8rJoTFoR-xhEt1ItJChSA5cXoIDyEWjooRV5P0mFxFYzbJ-dIN-6TMdivKxYIgncc528tKfgkeJ_R2d4MxbOANYscT0AYe8YkaGpRN0QGQBz35TRM1rgAEdSjqkCU46gNje3V4A4AOCbYMVChdoHRS9yOpTH4OSwM2g49Ywr6zYaHvx5UsB-yZ8la4IafzeNel9QVPOkrvVQR6BrFfKASp-fccjefqTLH-x6tPGQQE7T3fR7iHZOACbGfEaHBwLp8XikvCVnWsZhJY91J7lix8m5SFlQWomy3zK_r6mgJE6q5LDW8ruBRz8JDNwy-JbnjgeQlmwsEKssypbvCb07YGC7pS10lNVCCAQ5HOpAbuY8B0m9KhzHDGPzaFi8o3Ul_GHa9HKDYSKfAs8ahPFyyjD7VLQS5P3_X2huWcp5by7KzL0xUhfy7UPIErVAnMoDJxy9NMhWO4qY6mgVjjK-6pWlAC6-Jn68iArsn4PtnY-rJThlpT4xVURTKXqfsAE68_OJaWh8UpLa5ghRSaiB-Xzqr91K4Imt1hgqFMaYKkN806j_rrqdsotI7umiGNv8Li3M7O_xFug9rn85O-LpIpiM9nhN8FDYItN9PfTaCdSdBW78D7tNmkWS_pnFaxIdaNYXKrTORDLBqErHWRGltOFdg2cVmU3Hdk3W94z4uDw=s667-no?authuser=0')
+            .setThumbnail('https://i.ibb.co/p0VRyXx/logo.png')
             .addField('-', 'Escribe **!fps** en el canal llamado "Empezar Consulta". Una vez hecho esto, nuestro bot te añadirá a un canal privado donde tendrás que responder a las preguntas que este te haga. Cabe destacar que, todas estas respuestas no se pueden cambiar, por ello, ten en cuenta que la respuesta que mandes, será la respuesta final. ', true)
             .setImage('https://i.ibb.co/JkjnZcy/gif3.gif')
             await reaction.message.guild.members.cache.get(user.id).roles.add("765262764443828266");
@@ -71,9 +71,9 @@ Client.on("messageReactionAdd", async (reaction, user, message) => {
           const embedpcn = new Discord.MessageEmbed()
           .setColor('#fffafa')
           .setTitle('Sigue el siguiente formato')
-          .setAuthor('Micro Hub', 'https://lh3.googleusercontent.com/AjX98AroEi5AdLxGVQpKdKKSUJBMXtHSCzv_eiHfCaJ0ggk2io-WQln85D1DvwTFSAAMdJW1ypBDu3SBvihUqdKYnyoE_0Dy5VnV-QCKdji8y4zRFTSxK5ZQkDSguyY2YeSsDdQ7nZNepuRD8olpeze1YQw-PolzklqRAJZJkYn1kuvVrEIwRJfAwmrQJkjdnfIyMiBSetOiHaRS-umJr9-czsjls_2sdsjVQJjkN7NUePyg0qmH5bSYvY5IM91gxaTHmLEpqSCAz96SgoNlyHmj9b6IQcj4IXB4UM3nDjGnW7_FCLoU8Cd9S5p2akhhQONbr8x6UfUtQhiLjTcowN0_oyhCyUkWfypQaOdReeKPHrqZApHrKHOr2YnRyJFLnDdO07WetbpZfKJfStL6vI6rMXBxoPvAaVO5LLepD_m6NYMKIYaPieYBl2MkYVjfz_VuYiKFhxgLQrUYKx3YY3GakfwCuur0Tfp-AWK4PiEcAYeKf0uLr6nb8NsLLNcGITaKtQwCPgVOFQ3qCPeHwo-0wJ7-9S0tIshLwORynzFPgsz60nhEHeTgNScoPSbXbyVdjrnbwL7jubgGnlGBX3w10yAPrnC-71gsjAox495LQpah0rquzXE74T6_66hFe5rqDVrVeoHkmDB-kiNHuYWz9n_gbDgYHmmYNZvhBzTGVyUCnoRS_w=s667-no?authuser=0', 'https://www.instagram.com/atlasleague/')
+          .setAuthor('Micro Hub', 'https://i.ibb.co/p0VRyXx/logo.png', 'https://www.instagram.com/microhubco/')
           .setDescription('Para empezar con el proceso de tu consulta sigue esta instruccion')
-          .setThumbnail('https://lh3.googleusercontent.com/xzIAMw2AJld8rJoTFoR-xhEt1ItJChSA5cXoIDyEWjooRV5P0mFxFYzbJ-dIN-6TMdivKxYIgncc528tKfgkeJ_R2d4MxbOANYscT0AYe8YkaGpRN0QGQBz35TRM1rgAEdSjqkCU46gNje3V4A4AOCbYMVChdoHRS9yOpTH4OSwM2g49Ywr6zYaHvx5UsB-yZ8la4IafzeNel9QVPOkrvVQR6BrFfKASp-fccjefqTLH-x6tPGQQE7T3fR7iHZOACbGfEaHBwLp8XikvCVnWsZhJY91J7lix8m5SFlQWomy3zK_r6mgJE6q5LDW8ruBRz8JDNwy-JbnjgeQlmwsEKssypbvCb07YGC7pS10lNVCCAQ5HOpAbuY8B0m9KhzHDGPzaFi8o3Ul_GHa9HKDYSKfAs8ahPFyyjD7VLQS5P3_X2huWcp5by7KzL0xUhfy7UPIErVAnMoDJxy9NMhWO4qY6mgVjjK-6pWlAC6-Jn68iArsn4PtnY-rJThlpT4xVURTKXqfsAE68_OJaWh8UpLa5ghRSaiB-Xzqr91K4Imt1hgqFMaYKkN806j_rrqdsotI7umiGNv8Li3M7O_xFug9rn85O-LpIpiM9nhN8FDYItN9PfTaCdSdBW78D7tNmkWS_pnFaxIdaNYXKrTORDLBqErHWRGltOFdg2cVmU3Hdk3W94z4uDw=s667-no?authuser=0')
+          .setThumbnail('https://i.ibb.co/ZWYyvgJ/logo-insta.png')
           .addField('-', 'Escribe **!pcn** en el canal llamado "Empezar Consulta". Una vez hecho esto, nuestro bot te añadirá a un canal privado donde tendrás que responder a las preguntas que este te haga. Cabe destacar que, todas estas respuestas no se pueden cambiar, por ello, ten en cuenta que la respuesta que mandes, será la respuesta final. ', true)
           .setImage('https://i.ibb.co/JkjnZcy/gif3.gif')
           await reaction.message.guild.members.cache.get(user.id).roles.add("766427685114740798"); 
@@ -84,10 +84,9 @@ Client.on("messageReactionAdd", async (reaction, user, message) => {
           const embedpc = new Discord.MessageEmbed()
           .setColor('#fffafa')
           .setTitle('Sigue el siguiente formato')
-          .setURL('https://www.instagram.com/harkorfn/')
-          .setAuthor('Micro Hub', 'https://lh3.googleusercontent.com/AjX98AroEi5AdLxGVQpKdKKSUJBMXtHSCzv_eiHfCaJ0ggk2io-WQln85D1DvwTFSAAMdJW1ypBDu3SBvihUqdKYnyoE_0Dy5VnV-QCKdji8y4zRFTSxK5ZQkDSguyY2YeSsDdQ7nZNepuRD8olpeze1YQw-PolzklqRAJZJkYn1kuvVrEIwRJfAwmrQJkjdnfIyMiBSetOiHaRS-umJr9-czsjls_2sdsjVQJjkN7NUePyg0qmH5bSYvY5IM91gxaTHmLEpqSCAz96SgoNlyHmj9b6IQcj4IXB4UM3nDjGnW7_FCLoU8Cd9S5p2akhhQONbr8x6UfUtQhiLjTcowN0_oyhCyUkWfypQaOdReeKPHrqZApHrKHOr2YnRyJFLnDdO07WetbpZfKJfStL6vI6rMXBxoPvAaVO5LLepD_m6NYMKIYaPieYBl2MkYVjfz_VuYiKFhxgLQrUYKx3YY3GakfwCuur0Tfp-AWK4PiEcAYeKf0uLr6nb8NsLLNcGITaKtQwCPgVOFQ3qCPeHwo-0wJ7-9S0tIshLwORynzFPgsz60nhEHeTgNScoPSbXbyVdjrnbwL7jubgGnlGBX3w10yAPrnC-71gsjAox495LQpah0rquzXE74T6_66hFe5rqDVrVeoHkmDB-kiNHuYWz9n_gbDgYHmmYNZvhBzTGVyUCnoRS_w=s667-no?authuser=0', 'https://www.instagram.com/atlasleague/')
+          .setAuthor('Micro Hub', 'https://i.ibb.co/p0VRyXx/logo.png', 'https://www.instagram.com/microhubco/')
           .setDescription('Para empezar con el proceso de tu consulta sigue esta instruccion')
-          .setThumbnail('https://lh3.googleusercontent.com/xzIAMw2AJld8rJoTFoR-xhEt1ItJChSA5cXoIDyEWjooRV5P0mFxFYzbJ-dIN-6TMdivKxYIgncc528tKfgkeJ_R2d4MxbOANYscT0AYe8YkaGpRN0QGQBz35TRM1rgAEdSjqkCU46gNje3V4A4AOCbYMVChdoHRS9yOpTH4OSwM2g49Ywr6zYaHvx5UsB-yZ8la4IafzeNel9QVPOkrvVQR6BrFfKASp-fccjefqTLH-x6tPGQQE7T3fR7iHZOACbGfEaHBwLp8XikvCVnWsZhJY91J7lix8m5SFlQWomy3zK_r6mgJE6q5LDW8ruBRz8JDNwy-JbnjgeQlmwsEKssypbvCb07YGC7pS10lNVCCAQ5HOpAbuY8B0m9KhzHDGPzaFi8o3Ul_GHa9HKDYSKfAs8ahPFyyjD7VLQS5P3_X2huWcp5by7KzL0xUhfy7UPIErVAnMoDJxy9NMhWO4qY6mgVjjK-6pWlAC6-Jn68iArsn4PtnY-rJThlpT4xVURTKXqfsAE68_OJaWh8UpLa5ghRSaiB-Xzqr91K4Imt1hgqFMaYKkN806j_rrqdsotI7umiGNv8Li3M7O_xFug9rn85O-LpIpiM9nhN8FDYItN9PfTaCdSdBW78D7tNmkWS_pnFaxIdaNYXKrTORDLBqErHWRGltOFdg2cVmU3Hdk3W94z4uDw=s667-no?authuser=0')
+          .setThumbnail('https://i.ibb.co/ZWYyvgJ/logo-insta.png')
           .addField('-', 'Escribe **!mcn** en el canal llamado "Empezar Consulta". Una vez hecho esto, nuestro bot te añadirá a un canal privado donde tendrás que responder a las preguntas que este te haga. Cabe destacar que, todas estas respuestas no se pueden cambiar, por ello, ten en cuenta que la respuesta que mandes, será la respuesta final. ', true)
           .setImage('https://i.ibb.co/JkjnZcy/gif3.gif')
           await reaction.message.guild.members.cache.get(user.id).roles.add("785165729996734485"); 
@@ -129,10 +128,10 @@ Client.on("messageReactionAdd", async (reaction, user, message) => {
           const embedv = new Discord.MessageEmbed()
           .setColor('#fffafa')
           .setTitle('**¡Bienvenido a Micro Hub!**')
-          .setAuthor('Micro Hub', 'https://i.ibb.co/CQPrZYP/logo.png', 'https://www.instagram.com/atlasleague/')
+          .setAuthor('Micro Hub', 'https://i.ibb.co/CQPrZYP/logo.png', 'https://www.instagram.com/microhubco/')
           .setDescription('**¡Esperamos que disfrutes de nuestros servicios!**')
           .setThumbnail('https://i.ibb.co/CQPrZYP/logo.png')
-          .addField('**NUESTRAS REDES**', "**Instagram: https://www.instagram.com/atlasleague/** ")
+          .addField('**NUESTRAS REDES**', "**Instagram: https://www.instagram.com/microhubco/** ")
           await reaction.message.guild.members.cache.get(user.id).roles.add("766075999745474562");
           return user.send(embedv).catch(() => console.log("Failed to send DM."));       
     }
@@ -951,16 +950,15 @@ if (message.content.startsWith(prefix + "opinion")) {
         const exampleEmbed = new Discord.MessageEmbed()
             .setColor('#fffafa')
             .setTitle('Comandos')
-            .setURL('https://www.instagram.com/harkorfn/')
-            .setAuthor('Micro Hub', 'https://ibb.co/Jn0DbLL', 'https://www.instagram.com/atlasleague/')
-            .setDescription('Bienvenido a Micro Hub, donde podrás')
-            .setThumbnail('https://ibb.co/Jn0DbLL')
+            .setURL('https://www.instagram.com/microhubco/')
+            .setAuthor('Micro Hub', 'https://i.ibb.co/p0VRyXx/logo.png', 'https://www.instagram.com/microhubco/')
+            .setDescription(`**Bienvenido a Micro Hub** \n\n Disfruta de una comunidad aficionada por los computadores, solicita consultas y recibe ofertas de componentes. Si tienes algún inconveniente, no dudes en contactar con nuestro staff.`)
+            .setThumbnail('https://i.ibb.co/ZWYyvgJ/logo-insta.png')
             .addFields(
-                { name: 'Comandos', value: 'Prefijo #' },
+                { name: 'Comandos', value: 'Prefijo !' },
             )
-            .addField('Se aceptan sugerencias', 'Instagram: Micro Hub', true)
-            .setTimestamp()
-            .setFooter('Espero que disfrutes el bot!', 'https://ibb.co/Jn0DbLL');
+            .addField('Se aceptan sugerencias', 'Instagram: https://www.instagram.com/microhubco/', true)
+
 
         message.channel.send("Revisa tus mensajes privados").then(msg => msg.delete({ timeout: 3000 }));
         message.author.send(exampleEmbed);     
@@ -968,7 +966,7 @@ if (message.content.startsWith(prefix + "opinion")) {
       
 // Mensaje de Reacciones de Consulta
     if (message.content.startsWith(prefix + "23894723894278943274893274")) { //Creador de ticket
-        let channel = Client.channels.cache.get("765256854610640896"); //Discord channel id Matchmaking 1v1 boxfight
+        let channel = Client.channels.cache.get("765256854610640896");
         const embed3 = new Discord.MessageEmbed()
             .setColor('#fffafa')
             .setTitle("¡Selecciona tu tema de consulta!")
@@ -982,8 +980,8 @@ if (message.content.startsWith(prefix + "opinion")) {
         })
     }
 
-    if (message.content.startsWith(prefix + "3724893274892234324")) { //Creador de ticket
-      let channel = Client.channels.cache.get("766447645291708426"); //Discord channel id Matchmaking 1v1 boxfight
+    if (message.content.startsWith(prefix + "3724893274892234324")) { //Creador de verificacion
+      let channel = Client.channels.cache.get("766447645291708426"); 
       channel.send((`
       
       **¡BIENVENIDO A MICRO HUB!**
