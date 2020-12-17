@@ -827,13 +827,17 @@ if (message.content.startsWith(prefix + "78934789238942389")) {
 
 //Mensaje directo a usuario
 if(message.content.startsWith("!msgdm")) {
+  if (!message.member.roles.cache.find(r => r.name === "Admin")) {
+    message.channel.send("No tienes permisos suficientes para ejecutar este comando")
+  }
+  else{
   let messageToSend = message.content.split(" ").slice(2).join(" ");
   let userToSend = message.mentions.users.first();
 
   //sending the message
   userToSend.send(messageToSend);
 }
-
+}
 
 
 if (message.content.startsWith(prefix + "781273618723617823612783")) {
