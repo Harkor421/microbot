@@ -826,31 +826,12 @@ if (message.content.startsWith(prefix + "78934789238942389")) {
 }
 
 //Mensaje directo a usuario
-if (message.content.startsWith(prefix + "1723891273891723")) { 
-  var channel = Client.channels.cache.get("768702132169605130")  
-  channel.send("Escribe el testo").then(() => {
-    const filter = m => m.author.id == message.author.id //this ensures that it's waiting messages from the person who sent the message
-    channel.awaitMessages(filter, {time: 600000, max: 1, errors: ['time']}) //the time variable is the amount of milliseconds it should wait for, change this accordingly
-    .then(async messages => {
-      let titulo = messages.first().content 
-      
-          
-          channel.send("ID de usuario").then(() => {
-            channel.awaitMessages(filter, {time: 600000, max: 1, errors: ['time']}) //the time variable is the amount of milliseconds it should wait for, change this accordingly
-            .then(async messages2 => {
-              let destino = messages2.first().content 
-              var user1 = Client.users.cache.get(destino)
-              user1.send(titulo);
-          
+if(message.content.startsWith("!msgdm")) {
+  let messageToSend = message.content.split(" ").slice(2).join(" ");
+  let userToSend = message.mentions.users.first();
 
-        }).catch(() => {
-          message.channel.send("No ingresaste nada!")
-    }).catch(() => {
-      message.channel.send("No ingresaste nada!")
-      })
-    })
-})
-  })
+  //sending the message
+  userToSend.send(messageToSend);
 }
 
 
