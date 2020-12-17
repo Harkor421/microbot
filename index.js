@@ -993,9 +993,6 @@ if (message.content.startsWith(prefix + "opinion")) {
                 console.log("Data almacenada")
                 }
               })
-              var channel_id = message.channel.id
-              const fetchedChannel = message.guild.channels.cache.get(channel_id);
-              fetchedChannel.delete();
               console.log("Consulta Terminada")
                 })
               })
