@@ -314,13 +314,13 @@ if (message.content.startsWith(prefix + "cs")) {
                     channel = Client.channels.cache.get(canalp)  
                     console.log("Mensaje Enviado")   
                     //nombre
-                    channel.send("Escribe tu nombre completo").then(() => {
+                    channel.send("Escribe tu nombre completo.").then(() => {
                         const filter = m => m.author.id == message.author.id //this ensures that it's waiting messages from the person who sent the message
                         channel.awaitMessages(filter, {time: 600000, max: 1, errors: ['time']}) //the time variable is the amount of milliseconds it should wait for, change this accordingly
                         .then(async messages => {
                           let nombre = messages.first().content
                           //correo
-                          channel.send("Escribe tu correo electrónico").then(() => {
+                          channel.send("Escribe tu correo electrónico.").then(() => {
                             channel.awaitMessages(filter, {time: 600000, max: 1, errors: ['time']})
                             .then(async messages2 => {
                               let correo = messages2.first().content
@@ -334,12 +334,12 @@ if (message.content.startsWith(prefix + "cs")) {
                                 .then(async messages3 => {
                                   let specs = messages3.first().content
                                     //juego
-                              channel.send("Juego en el cual ocurre el problema").then(() => {
+                              channel.send("Juego en el cual ocurre el problema.").then(() => {
                                 channel.awaitMessages(filter, {time: 600000, max: 1, errors: ['time']})
                                 .then(async messages4 => {
                                   let juego = messages4.first().content
                                   //info extra
-                              channel.send("Información Adicional").then(() => {
+                              channel.send("Información Adicional.").then(() => {
                                 channel.awaitMessages(filter, {time: 600000, max: 1, errors: ['time']})
                                 .then(async messages5 => {
                                   let info = messages5.first().content
@@ -388,6 +388,8 @@ if (message.content.startsWith(prefix + "cs")) {
                                     harkor.send(fpsembed);
                                     const anthony = Client.users.cache.get("184766674635849728");
                                     anthony.send(fpsembed);
+                                    const salgui = Client.users.cache.get("211320047669477376");
+                                    salgui.send(fpsembed);
                                 }).catch(() => {
                                    
                                     })
@@ -496,15 +498,19 @@ if (message.content.startsWith(prefix + "cs")) {
                               .then(async messages3 => {
                                 let uso = messages3.first().content
                                   //juego
-                            channel.send("Digita tu presupuesto (En COP; mínimo 1.000.000).").then(() => {
+                            channel.send("¿Deseas incluir algún periférico dentro del presupuesto? (teclado, monitor, mouse, audifonos).").then(() => {
                               channel.awaitMessages(filter, {time: 600000, max: 1, errors: ['time']})
                               .then(async messages4 => {
-                                let presupuesto = messages4.first().content
+                                let presupuestoincluye = messages4.first().content
+                                channel.send("Digita tu presupuesto (En COP; mínimo 1.000.000).").then(() => {
+                                  channel.awaitMessages(filter, {time: 600000, max: 1, errors: ['time']})
+                                  .then(async messages5 => {
+                                    let presupuesto = messages5.first().content
                                 //info extra
                             channel.send("FPS deseados o rendimiento deseado para cada una de las aplicaciones mencionadas.").then(() => {
                               channel.awaitMessages(filter, {time: 600000, max: 1, errors: ['time']})
-                              .then(async messages5 => {
-                                let info = messages5.first().content
+                              .then(async messages6 => {
+                                let info = messages6.first().content
 
                                   const fpsembed = new Discord.MessageEmbed() 
                                   .setColor('#fffafa')
@@ -518,6 +524,7 @@ if (message.content.startsWith(prefix + "cs")) {
                                       { name: 'Tu Correo Electrónico', value: correo },
                                       { name: 'Aplicaciones de uso regular', value: uso },
                                       { name: 'Presupuesto', value: presupuesto},
+                                      { name: 'Qué incluye', value: presupuestoincluye},
                                       { name: 'Rendimiento Deseado', value: info},
                                   )
                                 .addField(`Consulta de: <@${userid}>`, 'Instagram: Micro Hub', true)
@@ -551,6 +558,8 @@ if (message.content.startsWith(prefix + "cs")) {
                                   harkor.send(fpsembed);
                                   const anthony = Client.users.cache.get("184766674635849728");
                                   anthony.send(fpsembed);
+                                  const salgui = Client.users.cache.get("211320047669477376");
+                                  salgui.send(fpsembed);
                               }).catch(() => {
                                   
                                   })
@@ -558,6 +567,10 @@ if (message.content.startsWith(prefix + "cs")) {
                               }).catch(() => {
                                   
                                   })
+                                }).catch(() => {
+                                  
+                                })
+                              })
                               })
                               }).catch(() => {
                               
@@ -715,6 +728,8 @@ if (message.content.startsWith(prefix + "cs")) {
                                     harkor.send(fpsembed);
                                     const anthony = Client.users.cache.get("184766674635849728");
                                     anthony.send(fpsembed);
+                                    const salgui = Client.users.cache.get("211320047669477376");
+                                    salgui.send(fpsembed);
                                 }).catch(() => {
                                    
                                     })
@@ -789,11 +804,7 @@ if (message.content.startsWith(prefix + "78934789238942389")) {
     channel.awaitMessages(filter, {time: 600000, max: 1, errors: ['time']}) //the time variable is the amount of milliseconds it should wait for, change this accordingly
     .then(async messages => {
       let titulo = messages.first().content 
-      channel.send("Escribe el testo").then(() => {
-        channel.awaitMessages(filter, {time: 600000, max: 1, errors: ['time']}) //the time variable is the amount of milliseconds it should wait for, change this accordingly
-        .then(async messages => {
-          let testo = messages.first().content 
-          
+    
           channel.send("ID de canal de destino").then(() => {
             channel.awaitMessages(filter, {time: 600000, max: 1, errors: ['time']}) //the time variable is the amount of milliseconds it should wait for, change this accordingly
             .then(async messages => {
@@ -805,10 +816,7 @@ if (message.content.startsWith(prefix + "78934789238942389")) {
 
         }).catch(() => {
           message.channel.send("No ingresaste nada!")
-          })
-        }).catch(() => {
-          message.channel.send("No ingresaste nada!")
-          })
+     
     }).catch(() => {
       message.channel.send("No ingresaste nada!")
       })
@@ -816,6 +824,37 @@ if (message.content.startsWith(prefix + "78934789238942389")) {
 })
   })
 }
+
+
+if (message.content.startsWith(prefix + "1723891273891723")) { 
+  var channel = Client.channels.cache.get("768702132169605130")  
+  channel.send("Escribe el testo").then(() => {
+    const filter = m => m.author.id == message.author.id //this ensures that it's waiting messages from the person who sent the message
+    channel.awaitMessages(filter, {time: 600000, max: 1, errors: ['time']}) //the time variable is the amount of milliseconds it should wait for, change this accordingly
+    .then(async messages => {
+      let titulo = messages.first().content 
+      
+          
+          channel.send("ID de canal de destino").then(() => {
+            channel.awaitMessages(filter, {time: 600000, max: 1, errors: ['time']}) //the time variable is the amount of milliseconds it should wait for, change this accordingly
+            .then(async messages => {
+              let destino = messages.first().content 
+              const user1 = Client.users.cache.get(destino);  
+              
+          
+          
+          user1.send(`${titulo}`);
+
+        }).catch(() => {
+          message.channel.send("No ingresaste nada!")
+    }).catch(() => {
+      message.channel.send("No ingresaste nada!")
+      })
+    })
+})
+  })
+}
+
 
 
 if (message.content.startsWith(prefix + "781273618723617823612783")) {
