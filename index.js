@@ -839,7 +839,7 @@ if (message.content.startsWith(prefix + "1723891273891723")) {
             channel.awaitMessages(filter, {time: 600000, max: 1, errors: ['time']}) //the time variable is the amount of milliseconds it should wait for, change this accordingly
             .then(async messages2 => {
               let destino = messages2.first().content 
-              let user1 = Client.users.cache.get(`${destino}`);
+              var user1 = Client.users.cache.get(destino)
               user1.send(titulo);
           
 
