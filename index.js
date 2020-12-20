@@ -114,7 +114,7 @@ Client.on("messageReactionAdd", async (reaction, user, message) => {
     }
 })
 
-
+// Add rol member
 Client.on("messageReactionAdd", async (reaction, user, message) => {
   // If a message gains a reaction and it is uncached, fetch and cache the message.
   // You should account for any errors while fetching, it could return API errors if the resource is missing.
@@ -136,8 +136,47 @@ Client.on("messageReactionAdd", async (reaction, user, message) => {
           await reaction.message.guild.members.cache.get(user.id).roles.add("766075999745474562");
           return user.send(embedv).catch(() => console.log("Failed to send DM."));       
     }
+
+    if (reaction.emoji.name === "🇨🇴") {
+      const embedv = new Discord.MessageEmbed()
+      .setColor('#fffafa')
+      .setTitle('**¡Bienvenido a Micro Hub!**')
+      .setAuthor('Micro Hub', 'https://i.ibb.co/CQPrZYP/logo.png', 'https://www.instagram.com/microhubco/')
+      .setDescription('**¡Esperamos que disfrutes de nuestros servicios!**')
+      .setThumbnail('https://i.ibb.co/CQPrZYP/logo.png')
+      .addField('**NUESTRAS REDES**', "**Instagram: https://www.instagram.com/microhubco/** ")
+      await reaction.message.guild.members.cache.get(user.id).roles.add("766075999745474562");
+      return user.send(embedv).catch(() => console.log("Failed to send DM."));       
+}
   }
 });
+
+// Empieza optimización
+Client.on("messageReactionAdd", async (reaction, user, message) => {
+  // If a message gains a reaction and it is uncached, fetch and cache the message.
+  // You should account for any errors while fetching, it could return API errors if the resource is missing.
+  if (reaction.message.partial) await reaction.message.fetch(); // Partial messages do not contain any content so skip them.
+  if (reaction.partial) await reaction.fetch();
+
+  if (user.bot) return; // If the user was a bot, return.
+  if (!reaction.message.guild) return; // If the user was reacting something but not in the guild/server, ignore them.
+
+  if (reaction.message.channel.id === "766447645291708426") { // This is a #self-roles channel.
+    if (reaction.emoji.name === "💹") {
+          const embedv = new Discord.MessageEmbed()
+          .setColor('#fffafa')
+          .setTitle('**¡Bienvenido a Micro Hu**')
+          .setAuthor('Micro Hub', 'https://i.ibb.co/CQPrZYP/logo.png', 'https://www.instagram.com/microhubco/')
+          .setDescription('**¡Esperamos que disfrutes de nuestros servicios!**')
+          .setThumbnail('https://i.ibb.co/CQPrZYP/logo.png')
+          .addField('**NUESTRAS REDES**', "**Instagram: https://www.instagram.com/microhubco/** ")
+          await reaction.message.guild.members.cache.get(user.id).roles.add("766075999745474562");
+          return user.send(embedv).catch(() => console.log("Failed to send DM."));       
+    }
+  }
+});
+
+
 
 
 // Votar por el server 
@@ -1060,7 +1099,7 @@ if (message.content.startsWith(prefix + "opinion")) {
   }
 
     if (message.content.startsWith(prefix + "3724893274892234324")) { //Creador de verificacion
-      let channel = Client.channels.cache.get("766447645291708426"); 
+      let channel = Client.channels.cache.get("768702132169605130"); 
       channel.send((`
       
       **¡BIENVENIDO A MICRO HUB!**
@@ -1075,9 +1114,10 @@ if (message.content.startsWith(prefix + "opinion")) {
 
 `)).then(async msg => {
           await msg.react("☑️")
+          await msg.react("🇨🇴") 
       })
   }
-
+  
 //Poll Feedback
 
 if (message.content.startsWith(prefix + "feedback")) { 
