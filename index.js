@@ -1131,7 +1131,7 @@ if (message.content.startsWith(prefix + "opinion")) {
 
 ➡️Si el problema persiste, comunicate con <@245215441725685770> <@184766674635849728> <@211320047669477376> para resolver el inconveniente lo más pronto posible.
 
-  **WELCOME TO MICRO HUB!**
+**WELCOME TO MICRO HUB!**
 
 📣 If you want to participate in the server, react pressing 🇺🇸 at the bottom part and you will get the rank of member. After this, you can start consultation processes, see the community chats and enjoy the server. 
 
