@@ -1119,7 +1119,7 @@ if (message.content.startsWith(prefix + "opinion")) {
   }
 
     if (message.content.startsWith(prefix + "3724893274892234324")) { //Creador de verificacion
-      let channel = Client.channels.cache.get("768702132169605130"); 
+      let channel = Client.channels.cache.get("766447645291708426"); 
       channel.send((`
       
       **¡BIENVENIDO A MICRO HUB!**
