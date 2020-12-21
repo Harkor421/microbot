@@ -125,15 +125,15 @@ Client.on("messageReactionAdd", async (reaction, user, message) => {
   if (!reaction.message.guild) return; // If the user was reacting something but not in the guild/server, ignore them.
 
   if (reaction.message.channel.id === "766447645291708426") { // This is a #self-roles channel.
-    if (reaction.emoji.name === "☑️") {
+    if (reaction.emoji.name === "🇺🇸") {
           const embedv = new Discord.MessageEmbed()
           .setColor('#fffafa')
-          .setTitle('**¡Bienvenido a Micro Hub!**')
+          .setTitle('**¡WELCOME TO MICRO HUB!**')
           .setAuthor('Micro Hub', 'https://i.ibb.co/CQPrZYP/logo.png', 'https://www.instagram.com/microhubco/')
-          .setDescription('**¡Esperamos que disfrutes de nuestros servicios!**')
+          .setDescription('**¡We hope you enjoy our services!**')
           .setThumbnail('https://i.ibb.co/CQPrZYP/logo.png')
-          .addField('**NUESTRAS REDES**', "**Instagram: https://www.instagram.com/microhubco/** ")
-          await reaction.message.guild.members.cache.get(user.id).roles.add("766075999745474562");
+          .addField('**OUR SOCIAL MEDIA**', "**Instagram: https://www.instagram.com/microhubco/** ")
+          await reaction.message.guild.members.cache.get(user.id).roles.add("790326197862137916");
           return user.send(embedv).catch(() => console.log("Failed to send DM."));       
     }
 
@@ -161,6 +161,21 @@ Client.on("messageReactionAdd", async (reaction, user, message) => {
   if (user.bot) return; // If the user was a bot, return.
   if (!reaction.message.guild) return; // If the user was reacting something but not in the guild/server, ignore them.
 
+  if (reaction.message.channel.id === "766447645291708426") { // This is a #self-roles channel.
+    if (reaction.emoji.name === "💹") {
+          const embedv = new Discord.MessageEmbed()
+          .setColor('#fffafa')
+          .setTitle('**¡Bienvenido a Micro Hu**')
+          .setAuthor('Micro Hub', 'https://i.ibb.co/CQPrZYP/logo.png', 'https://www.instagram.com/microhubco/')
+          .setDescription('**¡Esperamos que disfrutes de nuestros servicios!**')
+          .setThumbnail('https://i.ibb.co/CQPrZYP/logo.png')
+          .addField('**NUESTRAS REDES**', "**Instagram: https://www.instagram.com/microhubco/** ")
+          await reaction.message.guild.members.cache.get(user.id).roles.add("766075999745474562");
+          return user.send(embedv).catch(() => console.log("Failed to send DM."));       
+    }
+  }
+
+  
   if (reaction.message.channel.id === "766447645291708426") { // This is a #self-roles channel.
     if (reaction.emoji.name === "💹") {
           const embedv = new Discord.MessageEmbed()
@@ -209,10 +224,15 @@ Client.on("messageReactionRemove", async (reaction, user) => {
   if (reaction.message.guild.id !== "764721728228163624") return;
 
   if (reaction.message.channel.id === "766447645291708426") {
-      if (reaction.emoji.name === "☑️") {
-          await reaction.message.guild.members.cache.get(user.id).roles.remove("766075999745474562")
-          return user.send("Removiendo permisos...").catch(() => console.log("Failed to send DM."));
+      if (reaction.emoji.name === "🇺🇸") {
+          await reaction.message.guild.members.cache.get(user.id).roles.remove("790326197862137916")
+          return user.send("Removing role...").catch(() => console.log("Failed to send DM."));
       }
+
+      if (reaction.emoji.name === "🇨🇴") {
+        await reaction.message.guild.members.cache.get(user.id).roles.remove("766075999745474562")
+        return user.send("Removiendo permisos...").catch(() => console.log("Failed to send DM."));
+    }
     }
   })
 
@@ -1099,22 +1119,29 @@ if (message.content.startsWith(prefix + "opinion")) {
   }
 
     if (message.content.startsWith(prefix + "3724893274892234324")) { //Creador de verificacion
-      let channel = Client.channels.cache.get("768702132169605130"); 
+      let channel = Client.channels.cache.get("766447645291708426"); 
       channel.send((`
       
       **¡BIENVENIDO A MICRO HUB!**
       
       
-📣 Si quieres participar en el servidor reacciona presionando ☑️ en la parte inferior y obtendrás el rango de miembro. Luego de esto, podrás iniciar procesos de consulta, ver los chats de la comunidad y disfrutar del servidor.
+📣 Si quieres participar en el servidor reacciona presionando 🇨🇴 en la parte inferior y obtendrás el rango de miembro. Luego de esto, podrás iniciar procesos de consulta, ver los chats de la comunidad y disfrutar del servidor.
       
 ➡️Si reaccionaste y no te fue asignado el rango de miembro, remueve tu reacción y reacciona nuevamente.
 
 ➡️Si el problema persiste, comunicate con <@245215441725685770> <@184766674635849728> <@211320047669477376> para resolver el inconveniente lo más pronto posible.
 
+     **WELCOME TO MICRO HUB**
+
+📣 If you want to participate in the server, react pressing 🇺🇸 at the bottom part and you will get the rank of member. After this, you can start consultation processes, see the community chats and enjoy the server. 
+
+➡️If you reacted and you were not assigned the rank of member, remove your reaction and react again.
+     
+➡️If the problem persists, contact <@ 245215441725685770> <@ 184766674635849728> <@ 211320047669477376> to resolve the issue as soon as possible.
 
 `)).then(async msg => {
-          await msg.react("☑️")
-          await msg.react("🇨🇴") 
+          await msg.react("🇨🇴")
+          await msg.react("🇺🇸") 
       })
   }
   
