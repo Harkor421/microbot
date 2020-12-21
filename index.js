@@ -1131,13 +1131,13 @@ if (message.content.startsWith(prefix + "opinion")) {
 
 ➡️Si el problema persiste, comunicate con <@245215441725685770> <@184766674635849728> <@211320047669477376> para resolver el inconveniente lo más pronto posible.
 
-     **WELCOME TO MICRO HUB**
+  **WELCOME TO MICRO HUB!**
 
 📣 If you want to participate in the server, react pressing 🇺🇸 at the bottom part and you will get the rank of member. After this, you can start consultation processes, see the community chats and enjoy the server. 
 
 ➡️If you reacted and you were not assigned the rank of member, remove your reaction and react again.
      
-➡️If the problem persists, contact <@ 245215441725685770> <@ 184766674635849728> <@ 211320047669477376> to resolve the issue as soon as possible.
+➡️If the problem persists, contact <@245215441725685770> <@184766674635849728> <@211320047669477376> to resolve the issue as soon as possible.
 
 `)).then(async msg => {
           await msg.react("🇨🇴")
