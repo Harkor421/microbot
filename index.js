@@ -1133,7 +1133,7 @@ if (message.content.startsWith(prefix + "opinion")) {
 
 **WELCOME TO MICRO HUB!**
 
-📣 If you want to participate in the server, react pressing 🇺🇸 at the bottom part and you will get the rank of member. After this, you can start consultation processes, see the community chats and enjoy the server. 
+📣 If you want to participate in the server, react pressing 🇺🇸 at the bottom part and you will get the rank of member. After this, you can start consulting processes, see the community chats and enjoy the server. 
 
 ➡️If you reacted and you were not assigned the rank of member, remove your reaction and react again.
      
