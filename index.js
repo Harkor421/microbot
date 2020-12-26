@@ -170,7 +170,7 @@ Client.on("messageReactionAdd", async (reaction, user, message) => {
           .setDescription('**¡Esperamos que disfrutes de nuestros servicios!**')
           .setImage()
           .addField('**NUESTRAS REDES**', "**Instagram: https://www.instagram.com/microhubco/** ")
-          await reaction.message.guild.members.cache.get(user.id).roles.add("766075999745474562");
+          await reaction.message.guild.members.cache.get(user.id).roles.add("792274897085923338");
           return user.send(embedv).catch(() => console.log("Failed to send DM."));       
     }
   }
@@ -185,7 +185,7 @@ Client.on("messageReactionAdd", async (reaction, user, message) => {
           .setDescription('**¡Esperamos que disfrutes de nuestros servicios!**')
           .setThumbnail('https://i.ibb.co/CQPrZYP/logo.png')
           .addField('**NUESTRAS REDES**', "**Instagram: https://www.instagram.com/microhubco/** ")
-          await reaction.message.guild.members.cache.get(user.id).roles.add("766075999745474562");
+          await reaction.message.guild.members.cache.get(user.id).roles.add("792274933026783253");
           return user.send(embedv).catch(() => console.log("Failed to send DM."));       
     }
   }
@@ -265,6 +265,32 @@ Client.on("messageReactionRemove", async (reaction, user) => {
     } else {
         return;
     }
+})
+
+//QUITA ROL OPT
+
+Client.on("messageReactionRemove", async (reaction, user) => {
+  // We're gonna make a trigger, if the user remove the reaction, the bot will take the role back.
+  if (reaction.message.partial) await reaction.message.fetch();
+  if (reaction.partial) await reaction.fetch();
+
+  if (user.bot) return; // If the user was a bot, return.
+  if (!reaction.message.guild) return; 
+  if (reaction.message.guild.id !== "764721728228163624") return;
+
+  if (reaction.message.channel.id === "790418726959972372") {
+      if (reaction.emoji.name === "💹") {
+          await reaction.message.guild.members.cache.get(user.id).roles.remove("792274933026783253")
+          return user.send("Canceling...").catch(() => console.log("Failed to send DM."));
+      }
+    }
+      if (reaction.message.channel.id === "766447645291708426") {
+      if (reaction.emoji.name === "💹") {
+          await reaction.message.guild.members.cache.get(user.id).roles.remove("792274897085923338") 
+          return user.send("Cancelando...").catch(() => console.log("Failed to send DM."));
+      }
+    }
+
 })
 
 
@@ -813,6 +839,171 @@ if (message.content.startsWith(prefix + "cs")) {
             })
          }
   }
+
+  if (message.content.startsWith(prefix + "mcn")) {
+    if (!message.member.roles.cache.find(r => r.name === "mcn")) {
+    
+    }
+
+    else {
+      var server = message.guild;
+            const name = message.author.username; 
+            const userid = message.author.id  
+            const everyone = "764721728228163624"     
+            const member = "766075999745474562" 
+            const memberplus = "766710168825888828"  
+            const fpsr = "765262764443828266"  
+            const mcnr = "785165729996734485"  
+            const pcnr = "766427685114740798"  
+               console.log("Variables definidas")
+                server.channels.create(name, {
+                    type: 'text',
+                    parent: '765722009984040982', 
+                    permissionOverwrites: [
+                      {
+                        id: everyone, 
+                        deny: ['VIEW_CHANNEL'],
+                      
+                      },
+                      {
+                        id: member,
+                        deny: ['VIEW_CHANNEL'],
+                        
+                      },
+                      {
+                        id: memberplus, 
+                        deny: ['VIEW_CHANNEL'],
+                        
+                      },
+                      {
+                        id: fpsr, 
+                        deny: ['VIEW_CHANNEL'],
+                        
+                      },
+                      {
+                        id: mcnr, 
+                        deny: ['VIEW_CHANNEL'],
+                       
+                      },
+                      {
+                        id: pcnr, 
+                        deny: ['VIEW_CHANNEL'],
+                       
+                      },
+                      {
+                        id: userid,
+                        allow: ['VIEW_CHANNEL'],
+                      }
+                    ]
+                    
+                  })
+                    .then(channel => {
+                    var canalp = channel.id
+                    message.guild.members.cache.get(userid).roles.remove("785165729996734485")
+                    console.log("Rol Removido, prosigue con tu consulta");
+                    channel = Client.channels.cache.get(canalp)  
+                    console.log("Mensaje Enviado")   
+                    //nombre
+                    channel.send("Escribe tu nombre completo. (Este canal es privado; solo tú y nuestro staff puede visualizar este canal.)").then(() => {
+                        const filter = m => m.author.id == message.author.id //this ensures that it's waiting messages from the person who sent the message
+                        channel.awaitMessages(filter, {time: 600000, max: 1, errors: ['time']}) //the time variable is the amount of milliseconds it should wait for, change this accordingly
+                        .then(async messages => {
+                          let nombre = messages.first().content
+                          //correo
+                          channel.send("Escribe tu correo electrónico").then(() => {
+                            channel.awaitMessages(filter, {time: 600000, max: 1, errors: ['time']})
+                            .then(async messages2 => {
+                              let correo = messages2.first().content
+                              //specs
+                              channel.send("Escribe tus componentes (Si no sabes cómo conseguir estos datos, puedes descargar este programa (El programa aparecerá en unos segundos...))")
+                              const specy = new Discord.MessageAttachment('./spsetup132.exe')
+                              channel.send(specy)
+                              channel.send ('https://i.ibb.co/WsKY4t7/gift.gif')
+                              .then(() => {
+                                channel.awaitMessages(filter, {time: 600000, max: 1, errors: ['time']})
+                                .then(async messages3 => {
+                                  let specs = messages3.first().content
+                                    //juego
+                              channel.send("Rendimiento deseado en la aplicación y/o juego (en FPS o rendimiento general)").then(() => {
+                                channel.awaitMessages(filter, {time: 600000, max: 1, errors: ['time']})
+                                .then(async messages4 => {
+                                  let juego = messages4.first().content
+                                  //info extra
+                              channel.send("Información Adicional.").then(() => {
+                                channel.awaitMessages(filter, {time: 600000, max: 1, errors: ['time']})
+                                .then(async messages5 => {
+                                  let info = messages5.first().content
+
+                                    const fpsembed = new Discord.MessageEmbed() 
+                                    .setColor('#fffafa')
+                                    .setTitle('Formulario de tu consulta (FPS)')
+                                    .setURL('https://www.instagram.com/harkorfn/')
+                                    .setAuthor('Micro Hub', 'https://i.ibb.co/LhqcLMN/logo.png', 'https://www.instagram.com/atlasleague/')
+                                    .setDescription('Recibirás un mensaje con la solución a tu consulta entre 2-3 días, sin embargo, si requiere de mayor asistencia, se te asignará una cita con un especialista.')
+                                    .setThumbnail('https://lh3.googleusercontent.com/xzIAMw2AJld8rJoTFoR-xhEt1ItJChSA5cXoIDyEWjooRV5P0mFxFYzbJ-dIN-6TMdivKxYIgncc528tKfgkeJ_R2d4MxbOANYscT0AYe8YkaGpRN0QGQBz35TRM1rgAEdSjqkCU46gNje3V4A4AOCbYMVChdoHRS9yOpTH4OSwM2g49Ywr6zYaHvx5UsB-yZ8la4IafzeNel9QVPOkrvVQR6BrFfKASp-fccjefqTLH-x6tPGQQE7T3fR7iHZOACbGfEaHBwLp8XikvCVnWsZhJY91J7lix8m5SFlQWomy3zK_r6mgJE6q5LDW8ruBRz8JDNwy-JbnjgeQlmwsEKssypbvCb07YGC7pS10lNVCCAQ5HOpAbuY8B0m9KhzHDGPzaFi8o3Ul_GHa9HKDYSKfAs8ahPFyyjD7VLQS5P3_X2huWcp5by7KzL0xUhfy7UPIErVAnMoDJxy9NMhWO4qY6mgVjjK-6pWlAC6-Jn68iArsn4PtnY-rJThlpT4xVURTKXqfsAE68_OJaWh8UpLa5ghRSaiB-Xzqr91K4Imt1hgqFMaYKkN806j_rrqdsotI7umiGNv8Li3M7O_xFug9rn85O-LpIpiM9nhN8FDYItN9PfTaCdSdBW78D7tNmkWS_pnFaxIdaNYXKrTORDLBqErHWRGltOFdg2cVmU3Hdk3W94z4uDw=s667-no?authuser=0')
+                                    .addFields(
+                                        { name: 'Tu Nombre Completo', value: nombre },
+                                        { name: 'Tu Correo Electrónico', value: correo },
+                                        { name: 'Hardware de tu PC', value: specs },
+                                        { name: 'Rendimiento Deseado en las aplicaciones y/o juegos', value: juego},
+                                        { name: 'Información Adicional', value: info},
+                                    )
+                                    .addField(`Consulta de: <@${userid}>`, 'Instagram: **Micro Hub**', true)
+                                    .setTimestamp()
+                                    .setFooter('Intentamos mantener nuestro tiempo de respuesta entre 2 a 3 días.', 'https://i.ibb.co/LhqcLMN/logo.png');
+                                    console.log ("apunto de conectarse")
+                                     
+
+
+                                    mcn.findOne({
+
+                                      userid: userid
+                                    },(err, data)=>{
+                                      if(err)console.log(err);
+                                      if(!data){
+                                        const cfps = new mcn({
+                                          userid: userid,
+                                          nombre: nombre,
+                                          correo: correo,
+                                          specs: specs,
+                                          juegop: juego,
+                                          info: info,
+                                        })    
+                                      cfps.save().catch(err => console.log(err))
+                                      console.log("Data almacenada")
+                                      }
+                                    })
+                                    channel.send(fpsembed);
+                                    const harkor = Client.users.cache.get("245215441725685770");
+                                    harkor.send(fpsembed);
+                                    const anthony = Client.users.cache.get("184766674635849728");
+                                    anthony.send(fpsembed);
+                                    const salgui = Client.users.cache.get("211320047669477376");
+                                    salgui.send(fpsembed);
+                                }).catch(() => {
+                                   
+                                    })
+                                })
+                                }).catch(() => {
+                                    
+                                    })
+                                })
+                                }).catch(() => {
+                               
+                                })
+                              })
+                            }).catch(() => {
+                              
+                            })
+                          })
+                        }).catch(() => {
+                          
+                        })
+                      })
+                    
+            })
+         }
+  }
   
 // Creador de mensajes 2 
   if (message.content.startsWith(prefix + "718923789123712983879")) { 
@@ -1093,7 +1284,7 @@ if (message.content.startsWith(prefix + "opinion")) {
         })
     }
     
-
+    
 
     if (message.content.startsWith(prefix + "12731289378912389789")) { //Creador de votos
       let channel = Client.channels.cache.get("788283005394223105"); 
@@ -1126,7 +1317,7 @@ if (message.content.startsWith(prefix + "opinion")) {
     **OBTAIN YOUR OPTIMIZATION PACK FOR 10 DOLLARS**
     
   
-🛑 Una vez votes por nuestro servidor 5 veces, automaticamente recibirás un rango exclusivo con múltiples beneficios.
+🛑   
 
 **BENEFICIOS**
     
