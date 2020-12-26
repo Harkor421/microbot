@@ -165,10 +165,10 @@ Client.on("messageReactionAdd", async (reaction, user, message) => {
     if (reaction.emoji.name === "💹") {
           const embedv = new Discord.MessageEmbed()
           .setColor('#fffafa')
-          .setTitle('**¡Bienvenido a Micro Hu**')
+          .setTitle('**CÓMO PAGAR TU PACK DE OPTIMIZACIÓN**')
           .setAuthor('Micro Hub', 'https://i.ibb.co/CQPrZYP/logo.png', 'https://www.instagram.com/microhubco/')
           .setDescription('**¡Esperamos que disfrutes de nuestros servicios!**')
-          .setThumbnail('https://i.ibb.co/CQPrZYP/logo.png')
+          .setImage()
           .addField('**NUESTRAS REDES**', "**Instagram: https://www.instagram.com/microhubco/** ")
           await reaction.message.guild.members.cache.get(user.id).roles.add("766075999745474562");
           return user.send(embedv).catch(() => console.log("Failed to send DM."));       
@@ -176,11 +176,11 @@ Client.on("messageReactionAdd", async (reaction, user, message) => {
   }
 
   
-  if (reaction.message.channel.id === "766447645291708426") { // This is a #self-roles channel.
+  if (reaction.message.channel.id === "790418726959972372") { // This is a #self-roles channel.
     if (reaction.emoji.name === "💹") {
           const embedv = new Discord.MessageEmbed()
           .setColor('#fffafa')
-          .setTitle('**¡Bienvenido a Micro Hu**')
+          .setTitle('**HOW TO PAY FOR YOUR OPTIMIZATION PACK**')
           .setAuthor('Micro Hub', 'https://i.ibb.co/CQPrZYP/logo.png', 'https://www.instagram.com/microhubco/')
           .setDescription('**¡Esperamos que disfrutes de nuestros servicios!**')
           .setThumbnail('https://i.ibb.co/CQPrZYP/logo.png')
@@ -373,7 +373,7 @@ if (message.content.startsWith(prefix + "cs")) {
                     channel = Client.channels.cache.get(canalp)  
                     console.log("Mensaje Enviado")   
                     //nombre
-                    channel.send("Escribe tu nombre completo.").then(() => {
+                    channel.send("Escribe tu nombre completo. (Este canal es privado; solo tú y nuestro staff puede visualizar este canal.)").then(() => {
                         const filter = m => m.author.id == message.author.id //this ensures that it's waiting messages from the person who sent the message
                         channel.awaitMessages(filter, {time: 600000, max: 1, errors: ['time']}) //the time variable is the amount of milliseconds it should wait for, change this accordingly
                         .then(async messages => {
@@ -541,7 +541,7 @@ if (message.content.startsWith(prefix + "cs")) {
                   channel = Client.channels.cache.get(canalp)  
                   console.log("Mensaje Enviado")   
                   //nombre
-                  channel.send("Escribe tu nombre completo.").then(() => {
+                  channel.send("Escribe tu nombre completo. (Este canal es privado; solo tú y nuestro staff puede visualizar este canal.)").then(() => {
                       const filter = m => m.author.id == message.author.id //this ensures that it's waiting messages from the person who sent the message
                       channel.awaitMessages(filter, {time: 600000, max: 1, errors: ['time']}) //the time variable is the amount of milliseconds it should wait for, change this accordingly
                       .then(async messages => {
@@ -713,7 +713,7 @@ if (message.content.startsWith(prefix + "cs")) {
                     channel = Client.channels.cache.get(canalp)  
                     console.log("Mensaje Enviado")   
                     //nombre
-                    channel.send("Escribe tu nombre completo").then(() => {
+                    channel.send("Escribe tu nombre completo. (Este canal es privado; solo tú y nuestro staff puede visualizar este canal.)").then(() => {
                         const filter = m => m.author.id == message.author.id //this ensures that it's waiting messages from the person who sent the message
                         channel.awaitMessages(filter, {time: 600000, max: 1, errors: ['time']}) //the time variable is the amount of milliseconds it should wait for, change this accordingly
                         .then(async messages => {
@@ -1117,6 +1117,30 @@ if (message.content.startsWith(prefix + "opinion")) {
           await msg.react("📩")
       })
   }
+
+
+  if (message.content.startsWith(prefix + "72389472893747892")) { //Creador de votos
+    let channel = Client.channels.cache.get("790418726959972372"); 
+    channel.send((`
+    
+    **OBTAIN YOUR OPTIMIZATION PACK FOR 10 DOLLARS**
+    
+  
+🛑 Una vez votes por nuestro servidor 5 veces, automaticamente recibirás un rango exclusivo con múltiples beneficios.
+
+**BENEFICIOS**
+    
+CLICK IN THE 
+
+
+
+
+`)).then(async msg => {
+        await msg.react("💹")
+    })
+}
+
+  
 
     if (message.content.startsWith(prefix + "3724893274892234324")) { //Creador de verificacion
       let channel = Client.channels.cache.get("766447645291708426"); 
