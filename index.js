@@ -284,7 +284,7 @@ Client.on("messageReactionRemove", async (reaction, user) => {
           return user.send("Canceling...").catch(() => console.log("Failed to send DM."));
       }
     }
-      if (reaction.message.channel.id === "766447645291708426") {
+      if (reaction.message.channel.id === "792415236027842591") {
       if (reaction.emoji.name === "💹") {
           await reaction.message.guild.members.cache.get(user.id).roles.remove("792274897085923338") 
           return user.send("Cancelando...").catch(() => console.log("Failed to send DM."));
@@ -1518,15 +1518,15 @@ if (message.content.startsWith(prefix + "313871267378134324")) { //Creador OPT P
 
 
   
-  En el momento que tengas esta información, por favor espera en el canal de voz llamado #sala de espera hasta que algún administrador te mueva a un canal privado para trabajar en tu computador.
+En el momento que tengas esta información, por favor espera en el canal de voz llamado #sala de espera hasta que algún administrador te mueva a un canal privado para trabajar en tu computador.
 
-  Si tienes alguna inquietud o inconveniente no dudes en preguntar o en comunicarte con nosotros, siempre estamos dispuestos a ayudar a nuestros clientes. 
+Si tienes alguna inquietud o inconveniente no dudes en preguntar o en comunicarte con nosotros, siempre estamos dispuestos a ayudar a nuestros clientes. 
   
-  **Descargo de responsabilidad**: Si tu computador ya está bien optimizado hasta el punto de que los resultados no son los mismos que se evidencian en otras personas ,no se considera una excusa para solicitar un reembolso. Esa es tu decisión ya que igualmente tiempo y esfuerzo será puesto para cada aspecto que falta por optimizar. Los reembolsos NO son garantizados. Si tienen algún inconveniente se tendrán en cuenta únicamente dentro de un periodo máximo de 2 días después del servicio hecho. Los reembolsos sólo se otorgarán en casos muy especiales donde se tome la decisión por los 3 administradores.
+**Descargo de responsabilidad**: Si tu computador ya está bien optimizado hasta el punto de que los resultados no son los mismos que se evidencian en otras personas ,no se considera una excusa para solicitar un reembolso. Esa es tu decisión ya que igualmente tiempo y esfuerzo será puesto para cada aspecto que falta por optimizar. Los reembolsos NO son garantizados. Si tienen algún inconveniente se tendrán en cuenta únicamente dentro de un periodo máximo de 2 días después del servicio hecho. Los reembolsos sólo se otorgarán en casos muy especiales donde se tome la decisión por los 3 administradores.
   
  
  
-  **Para comenzar con el proceso, reacciona a este mensaje presionando 💹 en la parte inferior.**
+**Para comenzar con el proceso, reacciona a este mensaje presionando 💹 en la parte inferior.**
   
 
 
