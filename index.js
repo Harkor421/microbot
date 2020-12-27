@@ -1524,16 +1524,19 @@ if (message.content.startsWith(prefix + "opinion")) {
 
   if (message.content.startsWith(prefix + "72389472893747892")) { //Creador OPT PACK INGLES
     let channel = Client.channels.cache.get("790418726959972372"); 
-    channel.send((`
-    
-    **OBTAIN YOUR OPTIMIZATION PACK FOR 15 DOLLARS**
-    
+    channel.send((`  
   
-🛑   askdhasdg
-
-
+  **Pre-service instructions:**
+  
+  You need to have **Anydesk.com** downloaded. It is not necessary for you to create an account or do another action, we simply need the ID that appears in the upper left corner. THIS ID WILL ONLY BE REQUESTED AT THE TIME THAT YOU ARE WITH ANY ADMINISTRATOR WHO IS PROVIDING YOU THE SERVICE. DO NOT GIVE THIS ID TO ANYONE OTHER THAN @Harkor @Anthony 系列 @ monosalgado- lan
     
-CLICK IN THE 
+  When you have this information, please wait on the voice channel called #waiting room until an administrator moves you to a private channel to work on your computer.
+    
+  If you have any concerns or problems, do not hesitate to ask or contact us, we are always ready to help our customers.
+    
+  **Disclaimer**: If your computer is already well optimized to the point that the results are not the same as seen in other people, it is not considered an excuse to request a refund. That is your decision since equally time and effort will be put into each aspect that remains to be optimized. Refunds are NOT guaranteed. If they have any inconvenience, they will be taken into account only within a maximum period of 2 days after the service is done. Refunds will only be granted in very special cases where the decision is made by all 3 administrators.
+    
+  To start the process, react to this message by pressing 💹 at the bottom.
 
 
 
