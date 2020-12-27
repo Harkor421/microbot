@@ -1513,37 +1513,21 @@ if (message.content.startsWith(prefix + "313871267378134324")) { //Creador OPT P
   let channel = Client.channels.cache.get("792415236027842591"); 
   channel.send((`
   
-  **OBTEN TU PACK DE OPTIMIZACIÓN POR 30.000 COP**
-  
-
-🛑   **LEER ANTES DE COMENZAR CON EL PROCESO**
-
-El servicio de optimización para tu computador proporciona un aumento notable de tus FPS, reduce el tiempo de respuesta de los juegos(Delay), estabiliza la conexión a internet y muy probablemente reduce el ping. 
-Este servicio tiene un costo de **30.000 COP**, sin embargo, es posible conseguir un **descuento** adicional. 
-*Para obtener el descuento, será necesario lo siguiente:
-Poner una historia con nuestra publicación sobre nuestro pack de opt, etiquetando la cuenta @microhubco
-Enviar captura a nuestro instagram junto a tu nombre de discord
-Invitar a un amigo al servidor de discord (Verificaremos esto a través de tus invitaciones creadas)
-El valor final del servicio entonces será de **20.000 COP**, que nos demuestra por medio de capturas de pantalla que nos compartes en una historia de tu instagram y que además traes una nueva persona al servidor. Las personas que ya se les fue brindado el servicio de optimización, si es necesario un segundo servicio automáticamente se les será aplicado el descuento al valor de la consulta. El descuento que se le aplica dejará el servicio con un valor de **20.000 COP**.
-
-Es importante recalcar que el horario del servicio se hará en orden de pedido. Sin embargo, si alguien necesita este servicio urgentemente, y deseas prioridad por encima de las otras personas, se te cobrarán **10.000 COP** adicionales al valor del servicio. Este dinero adicional es solo si tenemos muchas solicitudes, y tú como cliente no quieres esperar tu turno o no tienes tiempo para esperar.  
-
-Si tienes alguna pregunta, comunicate con @Harkor @Anthony系列 @monosalgado- lan para resolver tu inquietud lo más pronto posible.
-
-**Instrucciones previas al servicio:**
-
-Es necesario que tengas descargado **Anydesk.com**. No es necesario que te crees una cuenta o que hagas otra acción, simplemente necesitamos el ID que aparece en la esquina derecha izquierda. ESTE ID SOLO SERÁ SOLICITADO EN EL MOMENTO QUE ESTÉS CON ALGÚN ADMINISTRADOR QUE TE ESTÉ PROPORCIONANDO EL SERVICIO. NO LE ENTREGUES ESTE ID A NINGUNA OTRA PERSONA DISTINTA DE @Harkor @Anthony系列 @monosalgado- lan
-
-En el momento que tengas esta información, por favor espera en el canal de voz llamado **"Sala de espera"** hasta que algún administrador te mueva a un canal privado para trabajar en tu computador.
-
-Si tienes alguna inquietud o inconveniente no dudes en preguntar o en comunicarte con nosotros, siempre estamos dispuestos a ayudar a nuestros clientes. 
-
-**Descargo de responsabilidad**: Si tu computador ya está bien optimizado hasta el punto de que los resultados no son los mismos que se evidencian en otras personas, no se considera una excusa para solicitar un reembolso. Esa es tu decisión ya que igualmente tiempo y esfuerzo será puesto para cada aspecto que falta por optimizar. Los reembolsos NO son garantizados. Si tienen algún inconveniente se tendrán en cuenta únicamente dentro de un periodo máximo de 2 días después del servicio hecho. Los reembolsos sólo se otorgarán en casos muy especiales donde se tome la decisión por los 3 administradores.
+ 
 
 
 
   
-Para comenzar con el proceso, reacciona a este mensaje presionando 💹 en la parte inferior.
+  En el momento que tengas esta información, por favor espera en el canal de voz llamado #sala de espera hasta que algún administrador te mueva a un canal privado para trabajar en tu computador.
+
+  Si tienes alguna inquietud o inconveniente no dudes en preguntar o en comunicarte con nosotros, siempre estamos dispuestos a ayudar a nuestros clientes. 
+  
+  **Descargo de responsabilidad**: Si tu computador ya está bien optimizado hasta el punto de que los resultados no son los mismos que se evidencian en otras personas ,no se considera una excusa para solicitar un reembolso. Esa es tu decisión ya que igualmente tiempo y esfuerzo será puesto para cada aspecto que falta por optimizar. Los reembolsos NO son garantizados. Si tienen algún inconveniente se tendrán en cuenta únicamente dentro de un periodo máximo de 2 días después del servicio hecho. Los reembolsos sólo se otorgarán en casos muy especiales donde se tome la decisión por los 3 administradores.
+  
+ 
+ 
+  **Para comenzar con el proceso, reacciona a este mensaje presionando 💹 en la parte inferior.**
+  
 
 
 
