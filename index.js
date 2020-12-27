@@ -1270,34 +1270,20 @@ if (message.content.startsWith(prefix + "pago")) {
     .then(async messages => {
       let metodo = messages.first().content 
     
-          message.channel.send("Adjunta el comprobante de pago y escribe si, justo después de adjuntar el comprobante.").then(() => {
-            message.channel.awaitMessages(filter, {time: 600000, max: 1, errors: ['time']}) //the time variable is the amount of milliseconds it should wait for, change this accordingly
-            .then(async messages => {
-              let img = message.attachments.first().url
-              let confirmation = messages.first().content
+          message.channel.send("Adjunta el comprobante de pago.")
               const userid = message.author.id  
               const comprobantep = new Discord.MessageEmbed() 
                                     .setColor('#fffafa')
                                     .setTitle('Comprobante de pago')
                                     .setAuthor('Micro Hub', 'https://i.ibb.co/LhqcLMN/logo.png', 'https://www.instagram.com/atlasleague/')
-                                    .setDescription('asd')
-                                    .addFields(
-                                        { name: 'Método de pago', value: metodo }  
-                                    )
-                                    .addField(`Consulta de: <@${userid}>`, 'Instagram: **Micro Hub**', true)
-                                    .setImage(`${img}`)
-                                    .setFooter('Intentamos mantener nuestro tiempo de respuesta entre 2 a 3 días.', 'https://i.ibb.co/LhqcLMN/logo.png');
-           
-                                    message.channel.send (comprobantep)
+                                    .setDescription(`Método de pago: ${metodo}`)
+                                    .setFooter(`Usuario: <@${userid}>`, 'https://i.ibb.co/LhqcLMN/logo.png');
+                                    let channel = Client.channels.cache.get("792598461224583188")  
+                                    channel.send(comprobantep)
       
 
         }).catch(() => {
           message.channel.send("No ingresaste nada!")
-     
-    }).catch(() => {
-      message.channel.send("No ingresaste nada!")
-      })
-    })
 })
   })
 }
