@@ -165,9 +165,9 @@ Client.on("messageReactionAdd", async (reaction, user, message) => {
     if (reaction.emoji.name === "💹") {
           const embedv = new Discord.MessageEmbed()
           .setColor('#fffafa')
-          .setTitle('**CÓMO PAGAR TU PACK DE OPTIMIZACIÓN**')
+          .setTitle('**Cómo empezar con el proceso**')
           .setAuthor('Micro Hub', 'https://i.ibb.co/CQPrZYP/logo.png', 'https://www.instagram.com/microhubco/')
-          .setDescription('**¡Esperamos que disfrutes de nuestros servicios!**')
+          .setDescription('**Escribe en el canal empezar-consulta "!optesp. Una vez hecho esto, nuestro bot te añadirá a un canal **privado** donde tendrás que responder a las preguntas que este te haga. Cabe destacar que, todas estas respuestas no se pueden cambiar, por ello, ten en cuenta que la respuesta que mandes, será la respuesta final."**')
           .setImage()
           .addField('**NUESTRAS REDES**', "**Instagram: https://www.instagram.com/microhubco/** ")
           await reaction.message.guild.members.cache.get(user.id).roles.add("792274897085923338");
@@ -1076,7 +1076,7 @@ if (message.content.startsWith(prefix + "cs")) {
                   })
                     .then(channel => {
                     var canalp = channel.id
-                    message.guild.members.cache.get(userid).roles.remove("785165729996734485")
+                    message.guild.members.cache.get(userid).roles.remove("792274897085923338")
                     console.log("Rol Removido, prosigue con tu consulta");
                     channel = Client.channels.cache.get(canalp)  
                     console.log("Mensaje Enviado")   
@@ -1101,19 +1101,16 @@ if (message.content.startsWith(prefix + "cs")) {
                                 .then(async messages3 => {
                                   let specs = messages3.first().content
                                     //juego
-                              channel.send("Rendimiento deseado en la aplicación y/o juego (en FPS o rendimiento general)").then(() => {
+                              channel.send("Juego a optimizar.").then(() => {
                                 channel.awaitMessages(filter, {time: 600000, max: 1, errors: ['time']})
                                 .then(async messages4 => {
                                   let juego = messages4.first().content
                                   //info extra
-                              channel.send("Información Adicional.").then(() => {
-                                channel.awaitMessages(filter, {time: 600000, max: 1, errors: ['time']})
-                                .then(async messages5 => {
-                                  let info = messages5.first().content
+                          
 
                                     const fpsembed = new Discord.MessageEmbed() 
                                     .setColor('#fffafa')
-                                    .setTitle('Formulario de tu consulta (FPS)')
+                                    .setTitle('Formulario pack de optimización (FPS)')
                                     .setURL('https://www.instagram.com/harkorfn/')
                                     .setAuthor('Micro Hub', 'https://i.ibb.co/LhqcLMN/logo.png', 'https://www.instagram.com/atlasleague/')
                                     .setDescription('Recibirás un mensaje con la solución a tu consulta entre 2-3 días, sin embargo, si requiere de mayor asistencia, se te asignará una cita con un especialista.')
@@ -1150,7 +1147,8 @@ if (message.content.startsWith(prefix + "cs")) {
                                       console.log("Data almacenada")
                                       }
                                     })
-                                    channel.send(fpsembed);
+                                    
+                                    channel.send("¡Ya estás a nada de conseguir tu cita para conseguir tu pack de optimización!");
                                     const harkor = Client.users.cache.get("245215441725685770");
                                     harkor.send(fpsembed);
                                     const anthony = Client.users.cache.get("184766674635849728");
@@ -1168,10 +1166,7 @@ if (message.content.startsWith(prefix + "cs")) {
                                 }).catch(() => {
                                
                                 })
-                              })
-                            }).catch(() => {
-                              
-                            })
+                            
                           })
                         }).catch(() => {
                           
@@ -1266,6 +1261,47 @@ if(message.content.startsWith("!msgdm")) {
 }
 }
 
+//comprobante de pago
+if (message.content.startsWith(prefix + "pago")) { 
+  
+  message.channel.send("Escribe el método de pago utilizado para la cancelación de tu pack de optimización (Paypal, Nequi o Bancolombia).").then(() => {
+    const filter = m => m.author.id == message.author.id //this ensures that it's waiting messages from the person who sent the message
+    message.channel.awaitMessages(filter, {time: 600000, max: 1, errors: ['time']}) //the time variable is the amount of milliseconds it should wait for, change this accordingly
+    .then(async messages => {
+      let metodo = messages.first().content 
+    
+          message.channel.send("Adjunta el comprobante de pago.").then(() => {
+            message.channel.awaitMessages(filter, {time: 600000, max: 1, errors: ['time']}) //the time variable is the amount of milliseconds it should wait for, change this accordingly
+            .then(async messages => {
+              let img = messages.first().content 
+          
+              const userid = message.author.id  
+
+              const comprobantep = new Discord.MessageEmbed() 
+                                    .setColor('#fffafa')
+                                    .setTitle('Comprobante de pago')
+                                    .setAuthor('Micro Hub', 'https://i.ibb.co/LhqcLMN/logo.png', 'https://www.instagram.com/atlasleague/')
+                                    .setDescription('Recibirás un mensaje con la solución a tu consulta entre 2-3 días, sin embargo, si requiere de mayor asistencia, se te asignará una cita con un especialista.')
+                                    .addFields(
+                                        { name: 'Método de pago', value: metodo }  
+                                    )
+                                    .addField(`Consulta de: <@${userid}>`, 'Instagram: **Micro Hub**', true)
+                                    .setImage (img) 
+                                    .setFooter('Intentamos mantener nuestro tiempo de respuesta entre 2 a 3 días.', 'https://i.ibb.co/LhqcLMN/logo.png');
+           
+                                    message.channel.send (comprobantep)
+      
+
+        }).catch(() => {
+          message.channel.send("No ingresaste nada!")
+     
+    }).catch(() => {
+      message.channel.send("No ingresaste nada!")
+      })
+    })
+})
+  })
+}
 
 if (message.content.startsWith(prefix + "781273618723617823612783")) {
   
