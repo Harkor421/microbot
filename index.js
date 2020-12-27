@@ -161,7 +161,7 @@ Client.on("messageReactionAdd", async (reaction, user, message) => {
   if (user.bot) return; // If the user was a bot, return.
   if (!reaction.message.guild) return; // If the user was reacting something but not in the guild/server, ignore them.
 
-  if (reaction.message.channel.id === "792274897085923338") { // This is a #self-roles channel.
+  if (reaction.message.channel.id === "792415236027842591") { // This is a #self-roles channel.
     if (reaction.emoji.name === "💹") {
           const embedv = new Discord.MessageEmbed()
           .setColor('#fffafa')
