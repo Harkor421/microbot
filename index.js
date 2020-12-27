@@ -1280,12 +1280,12 @@ if (message.content.startsWith(prefix + "pago")) {
                                     .setColor('#fffafa')
                                     .setTitle('Comprobante de pago')
                                     .setAuthor('Micro Hub', 'https://i.ibb.co/LhqcLMN/logo.png', 'https://www.instagram.com/atlasleague/')
-                                    .setDescription('Recibirás un mensaje con la solución a tu consulta entre 2-3 días, sin embargo, si requiere de mayor asistencia, se te asignará una cita con un especialista.')
+                                    .setDescription(img)
                                     .addFields(
                                         { name: 'Método de pago', value: metodo }  
                                     )
                                     .addField(`Consulta de: <@${userid}>`, 'Instagram: **Micro Hub**', true)
-                                    .setImage (img) 
+                                    
                                     .setFooter('Intentamos mantener nuestro tiempo de respuesta entre 2 a 3 días.', 'https://i.ibb.co/LhqcLMN/logo.png');
            
                                     message.channel.send (comprobantep)
