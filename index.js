@@ -1119,8 +1119,7 @@ if (message.content.startsWith(prefix + "cs")) {
                                         { name: 'Tu Nombre Completo', value: nombre },
                                         { name: 'Tu Correo Electrónico', value: correo },
                                         { name: 'Hardware de tu PC', value: specs },
-                                        { name: 'Rendimiento Deseado en las aplicaciones y/o juegos', value: juego},
-                                        { name: 'Información Adicional', value: info},
+                                        { name: 'Juego a optimizar.', value: juego},
                                     )
                                     .addField(`Consulta de: <@${userid}>`, 'Instagram: **Micro Hub**', true)
                                     .setTimestamp()
@@ -1147,7 +1146,7 @@ if (message.content.startsWith(prefix + "cs")) {
                                       console.log("Data almacenada")
                                       }
                                     })
-                                    
+                                
                                     channel.send("¡Ya estás a nada de conseguir tu cita para conseguir tu pack de optimización!");
                                     const harkor = Client.users.cache.get("245215441725685770");
                                     harkor.send(fpsembed);
