@@ -1140,7 +1140,6 @@ if (message.content.startsWith(prefix + "cs")) {
                                           correo: correo,
                                           specs: specs,
                                           juegop: juego,
-                                          info: info,
                                         })    
                                       cfps.save().catch(err => console.log(err))
                                       console.log("Data almacenada")
