@@ -1273,7 +1273,7 @@ if (message.content.startsWith(prefix + "pago")) {
           message.channel.send("Adjunta el comprobante de pago.").then(() => {
             message.channel.awaitMessages(filter, {time: 600000, max: 1, errors: ['time']}) //the time variable is the amount of milliseconds it should wait for, change this accordingly
             .then(async messages => {
-              let img = messages.first().attachments.url;
+              let img = messages.attachments.first().url
           
               const userid = message.author.id  
               const comprobantep = new Discord.MessageEmbed() 
