@@ -1123,7 +1123,7 @@ if (message.content.startsWith(prefix + "cs")) {
                                     )
                                     .addField(`Consulta de: <@${userid}>`, 'Instagram: **Micro Hub**', true)
                                     .setTimestamp()
-                                    .setFooter('Intentamos mantener nuestro tiempo de respuesta entre 2 a 3 días.', 'https://i.ibb.co/LhqcLMN/logo.png');
+                                    .setFooter('Intentamos mantener nuestro tiempo de respuesta entre 2 a 3 días.', 'https://i.ibb.co/LhqcLMN/logo.png')
                                     console.log ("apunto de conectarse")
                                      
 
@@ -1145,8 +1145,18 @@ if (message.content.startsWith(prefix + "cs")) {
                                       console.log("Data almacenada")
                                       }
                                     })
-                                
-                                    channel.send("¡Ya estás a nada de conseguir tu cita para conseguir tu pack de optimización!");
+
+                                    channel.send(`¡Ya estás a nada de conseguir tu cita para conseguir tu pack de optimización! 
+                                    
+                                    **Los metodos de pago son los siguientes:**
+                                    **Bancolombia(ahorros):**912-107136-25
+                                    **Nequi:**3104551925
+                                    **Davivienda(ahorros):**029670012615
+                                    
+                                    Una vez transferido el dinero, envia un comprobante al canal escribiendo **!pago**, e inmediatamente te daremos respuesta.
+                                    
+                                    **Muchas Gracias**`);
+
                                     const harkor = Client.users.cache.get("245215441725685770");
                                     harkor.send(fpsembed);
                                     const anthony = Client.users.cache.get("184766674635849728");
@@ -1276,9 +1286,15 @@ if (message.content.startsWith(prefix + "pago")) {
                                     .setAuthor('Micro Hub', 'https://i.ibb.co/LhqcLMN/logo.png', 'https://www.instagram.com/atlasleague/')
                                     .setDescription(`Método de pago: ${metodo}`)
                                     .setFooter(`Usuario: <@${userid}>`, 'https://i.ibb.co/LhqcLMN/logo.png');
+                                   
                                     let channel = Client.channels.cache.get("792598461224583188")  
                                     channel.send(comprobantep)
-      
+                                    const harkor = Client.users.cache.get("245215441725685770");
+                                    harkor.send(comprobantep);
+                                    const anthony = Client.users.cache.get("184766674635849728");
+                                    anthony.send(comprobantep);
+                                    const salgui = Client.users.cache.get("211320047669477376");
+                                    salgui.send(comprobantep);
 
         }).catch(() => {
           message.channel.send("No ingresaste nada!")
