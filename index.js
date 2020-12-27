@@ -1010,6 +1010,7 @@ if (message.content.startsWith(prefix + "cs")) {
             })
          }
   }
+  
   if (message.content.startsWith(prefix + "optesp")) {
     if (!message.member.roles.cache.find(r => r.name === "optesp")) {
     
@@ -1493,9 +1494,9 @@ if (message.content.startsWith(prefix + "opinion")) {
     **OBTAIN YOUR OPTIMIZATION PACK FOR 10 DOLLARS**
     
   
-🛑   
+🛑   askdhasdg
 
-**BENEFICIOS**
+
     
 CLICK IN THE 
 
