@@ -168,7 +168,7 @@ Client.on("messageReactionAdd", async (reaction, user, message) => {
           .setTitle('**Cómo empezar con el proceso**')
           .setAuthor('Micro Hub', 'https://i.ibb.co/CQPrZYP/logo.png', 'https://www.instagram.com/microhubco/')
           .setDescription('Escribe en el canal empezar-start "!optesp". Una vez hecho esto, nuestro bot te añadirá a un canal **privado** donde tendrás que responder a las preguntas que este te haga. Cabe destacar que, todas estas respuestas no se pueden cambiar, por ello, ten en cuenta que la respuesta que mandes, será la respuesta final."')
-          .setImage()
+          .setImage("https://i.ibb.co/P9Tk1fT/ezgif-com-gif-maker.gif")
           .addField('**NUESTRAS REDES**', "**Instagram: https://www.instagram.com/microhubco/** ")
           await reaction.message.guild.members.cache.get(user.id).roles.add("792274897085923338");
           return user.send(embedv).catch(() => console.log("Failed to send DM."));       
