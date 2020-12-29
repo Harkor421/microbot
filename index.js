@@ -910,18 +910,18 @@ if (message.content.startsWith(prefix + "cs")) {
                     channel = Client.channels.cache.get(canalp)  
                     console.log("Mensaje Enviado")   
                     //nombre
-                    channel.send("Escribe tu nombre completo. (Este canal es privado; solo tú y nuestro staff puede visualizar este canal.)").then(() => {
+                    channel.send("Type your Discord. (This channel is private; only you and our staff may see this channel)").then(() => {
                         const filter = m => m.author.id == message.author.id //this ensures that it's waiting messages from the person who sent the message
                         channel.awaitMessages(filter, {time: 600000, max: 1, errors: ['time']}) //the time variable is the amount of milliseconds it should wait for, change this accordingly
                         .then(async messages => {
                           let nombre = messages.first().content
                           //correo
-                          channel.send("Escribe tu correo electrónico").then(() => {
+                          channel.send("Type your email.").then(() => {
                             channel.awaitMessages(filter, {time: 600000, max: 1, errors: ['time']})
                             .then(async messages2 => {
                               let correo = messages2.first().content
                               //specs
-                              channel.send("Escribe tus componentes (Si no sabes cómo conseguir estos datos, puedes descargar este programa (El programa aparecerá en unos segundos...))")
+                              channel.send("Type your components (Si no sabes cómo conseguir estos datos, puedes descargar este programa (El programa aparecerá en unos segundos...))")
                               const specy = new Discord.MessageAttachment('./spsetup132.exe')
                               channel.send(specy)
                               channel.send ('https://i.ibb.co/WsKY4t7/gift.gif')
@@ -1526,17 +1526,17 @@ if (message.content.startsWith(prefix + "opinion")) {
     let channel = Client.channels.cache.get("790418726959972372"); 
     channel.send((`  
   
-  **Pre-service instructions:**
-  
-  You need to have **Anydesk.com** downloaded. It is not necessary for you to create an account or do another action, we simply need the ID that appears in the upper left corner. THIS ID WILL ONLY BE REQUESTED AT THE TIME THAT YOU ARE WITH ANY ADMINISTRATOR WHO IS PROVIDING YOU THE SERVICE. DO NOT GIVE THIS ID TO ANYONE OTHER THAN @Harkor @Anthony 系列 @ monosalgado- lan
+   **Pre-service instructions:**
+
+   You need to have **Anydesk.com** downloaded. It is not necessary for you to create an account or do another action, we simply need the ID that appears in the upper left corner. THIS ID WILL ONLY BE REQUESTED AT THE TIME THAT YOU ARE WITH ANY ADMINISTRATOR WHO IS PROVIDING YOU THE SERVICE. DO NOT GIVE THIS ID TO ANYONE OTHER THAN @Harkor @Anthony 系列 @ monosalgado- lan
     
-  When you have this information, please wait on the voice channel called #waiting room until an administrator moves you to a private channel to work on your computer.
+   When you have this information, please wait on the voice channel called #waiting room until an administrator moves you to a private channel to work on your computer.
     
-  If you have any concerns or problems, do not hesitate to ask or contact us, we are always ready to help our customers.
+   If you have any concerns or problems, do not hesitate to ask or contact us, we are always ready to help our customers.
     
-  **Disclaimer**: If your computer is already well optimized to the point that the results are not the same as seen in other people, it is not considered an excuse to request a refund. That is your decision since equally time and effort will be put into each aspect that remains to be optimized. Refunds are NOT guaranteed. If they have any inconvenience, they will be taken into account only within a maximum period of 2 days after the service is done. Refunds will only be granted in very special cases where the decision is made by all 3 administrators.
+   **Disclaimer**: If your computer is already well optimized to the point that the results are not the same as seen in other people, it is not considered an excuse to request a refund. That is your decision since equally time and effort will be put into each aspect that remains to be optimized. Refunds are NOT guaranteed. If they have any inconvenience, they will be taken into account only within a maximum period of 2 days after the service is done. Refunds will only be granted in very special cases where the decision is made by all 3 administrators.
     
-  To start the process, react to this message by pressing 💹 at the bottom.
+   To start the process, react to this message by pressing 💹 at the bottom.
 
 
 
