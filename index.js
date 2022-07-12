@@ -27,6 +27,7 @@ mongoose.connect(botconfig.mongoPass, {
 console.log("Conectado a base de datos");
 
 setInterval(() => {
+try{
 
 var con = mysql.createConnection({
   host: "68.178.223.16",
@@ -46,7 +47,11 @@ con.connect(function(err) {
     });
 
 });
+}
+catch 
+{
 
+}
 }, 60000);  
 
 
