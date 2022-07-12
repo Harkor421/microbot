@@ -14,7 +14,7 @@ const config = require('./config.json');
 const { db } = require("./mcn.js");
 const e = require("express");
 var ws = new WS(config.ws.token, config.ws.port, Client);
-
+var mysql = require('mysql');
 //DBL
 
 
@@ -26,6 +26,25 @@ mongoose.connect(botconfig.mongoPass, {
 });
 console.log("Conectado a base de datos");
 
+setInterval(() => {
+
+var con = mysql.createConnection({
+  host: "68.178.223.16",
+  user: "MicroHubClient",
+  password: "Micro69420",
+  database: "lmc.fa8.mywebsitetransfer.com_1656277487"
+});
+
+Client.user.setActivity("!ayuda", {
+  type: "PLAYING",
+  url: "https://www.twitch.tv/harkorfn"      
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+});
+}, 6000);  
 
 
 // Perfil del  bot 
