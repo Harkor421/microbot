@@ -35,16 +35,18 @@ var con = mysql.createConnection({
   database: "lmc.fa8.mywebsitetransfer.com_1656277487"
 });
 
-Client.user.setActivity("!ayuda", {
-  type: "PLAYING",
-  url: "https://www.twitch.tv/harkorfn"      
+con.connect(function(err) {
+  con.query('SELECT COUNT(ID) AS count FROM wp_users', (err, rows) => {
+    const count = rows[0].count;
+    console.log(`count: ${count}`);
+    Client.user.setActivity(count + " descargas", {
+      type: "PLAYING",    
+    });
+    });
+
 });
 
-con.connect(function(err) {
-  if (err) throw err;
-  console.log("Connected!");
-});
-}, 6000);  
+}, 10000);  
 
 
 // Perfil del  bot 
