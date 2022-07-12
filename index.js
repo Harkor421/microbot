@@ -40,7 +40,8 @@ con.connect(function(err) {
     const count = rows[0].count;
     console.log(`count: ${count}`);
     Client.user.setActivity(count + " descargas", {
-      type: "PLAYING",    
+      type: "PLAYING",
+      url: "https://www.twitch.tv/harkor421"    
     });
     });
 
