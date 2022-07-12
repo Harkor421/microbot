@@ -47,7 +47,7 @@ con.connect(function(err) {
 
 });
 
-}, 10000);  
+}, 60000);  
 
 
 // Perfil del  bot 
