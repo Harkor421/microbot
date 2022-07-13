@@ -27,16 +27,18 @@ mongoose.connect(botconfig.mongoPass, {
 console.log("Conectado a base de datos");
 
 
-var con = mysql.createConnection({
-  host: "68.178.223.16",
-  user: "MicroHubClient",
-  password: "Micro69420",
-  database: "lmc.fa8.mywebsitetransfer.com_1656277487"
-});
+
 
 
 setInterval(() => {
 try{
+
+  var con = mysql.createConnection({
+    host: "68.178.223.16",
+    user: "MicroHubClient",
+    password: "Micro69420",
+    database: "lmc.fa8.mywebsitetransfer.com_1656277487"
+  });
 
 con.connect(function(err) {
   con.query('SELECT COUNT(ID) AS count FROM wp_users', (err, rows) => {
@@ -47,14 +49,14 @@ con.connect(function(err) {
       url: "https://www.twitch.tv/harkor421"    
     });
     });    
-    con.destroy();         
+    con.destroy();     
 });
 }
 catch 
 {
 
 }
-}, 60000);  
+}, 6000);  
 
 
 // Perfil del  bot 
@@ -1678,7 +1680,7 @@ if (message.content.startsWith(prefix + "feedback")) {
 
 
 
-Client.login(process.env.TOKEN); 
+Client.login("NzY0NzIxMDA3NzQyOTQzMjMy.X4KX8A.PWNlbeLA9FNg9kBaGdncLS_j_cg"); 
 
 
 
