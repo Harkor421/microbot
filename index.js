@@ -49,7 +49,7 @@ con.connect(function(err) {
       url: "https://www.twitch.tv/harkor421"    
     });
     });    
-    con.destroy();     
+  
 });
 }
 catch 
