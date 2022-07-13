@@ -26,8 +26,6 @@ mongoose.connect(botconfig.mongoPass, {
 });
 console.log("Conectado a base de datos");
 
-setInterval(() => {
-try{
 
 var con = mysql.createConnection({
   host: "68.178.223.16",
@@ -35,6 +33,10 @@ var con = mysql.createConnection({
   password: "Micro69420",
   database: "lmc.fa8.mywebsitetransfer.com_1656277487"
 });
+
+
+setInterval(() => {
+try{
 
 con.connect(function(err) {
   con.query('SELECT COUNT(ID) AS count FROM wp_users', (err, rows) => {
@@ -44,8 +46,8 @@ con.connect(function(err) {
       type: "PLAYING",
       url: "https://www.twitch.tv/harkor421"    
     });
-    });
-
+    });    
+    con.destroy();         
 });
 }
 catch 
