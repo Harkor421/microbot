@@ -40,23 +40,50 @@ try{
     database: "lmc.fa8.mywebsitetransfer.com_1656277487"
   });
 
-con.connect(function(err) {
-  con.query('SELECT COUNT(ID) AS count FROM wp_users', (err, rows) => {
-    const count = rows[0].count;
-    console.log(`count: ${count}`);
-    Client.user.setActivity(count + " descargas", {
-      type: "PLAYING",
-      url: "https://www.twitch.tv/harkor421"    
-    });
-    });    
+  var db_config = {
+    host: '68.178.223.16',
+      user: 'MicroHubClient',
+      password: 'Micro69420',
+      database: 'lmc.fa8.mywebsitetransfer.com_1656277487'
+  };
+
+  function handleDisconnect() {
+    connection = mysql.createConnection(db_config); // Recreate the connection, since
+                                                    // the old one cannot be reused.
   
-});
+    connection.connect(function(err) {       
+      con.query('SELECT COUNT(ID) AS count FROM wp_users', (err, rows) => {
+        const count = rows[0].count;
+        console.log(`count: ${count}`);
+        Client.user.setActivity(count + " descargas", {
+          type: "PLAYING",
+          url: "https://www.twitch.tv/harkor421"    
+        });
+        });    
+      if(err) {                                     // or restarting (takes a while sometimes).
+        console.log('error when connecting to db:', err);
+        setTimeout(handleDisconnect, 2000); // We introduce a delay before attempting to reconnect,
+      }                                     // to avoid a hot loop, and to allow our node script to
+    });                                     // process asynchronous requests in the meantime.
+                                            // If you're also serving http, display a 503 error.
+    connection.on('error', function(err) {
+      console.log('db error', err);
+      if(err.code === 'PROTOCOL_CONNECTION_LOST') { // Connection to the MySQL server is usually
+        handleDisconnect();                         // lost due to either server restart, or a
+      } else {                                      // connnection idle timeout (the wait_timeout
+        throw err;                                  // server variable configures this)
+      }
+    });
+  }
+  
+  handleDisconnect();
+
 }
 catch 
 {
 
 }
-}, 6000);  
+}, 60000);  
 
 
 // Perfil del  bot 
