@@ -52,7 +52,7 @@ try{
                                                     // the old one cannot be reused.
   
     connection.connect(function(err) {       
-      con.query('SELECT COUNT(ID) AS count FROM wp_users', (err, rows) => {
+      connection.query('SELECT COUNT(ID) AS count FROM wp_users', (err, rows) => {
         const count = rows[0].count;
         console.log(`count: ${count}`);
         Client.user.setActivity(count + " descargas", {
@@ -63,7 +63,8 @@ try{
       if(err) {                                     // or restarting (takes a while sometimes).
         console.log('error when connecting to db:', err);
         setTimeout(handleDisconnect, 2000); // We introduce a delay before attempting to reconnect,
-      }                                     // to avoid a hot loop, and to allow our node script to
+      } 
+                                          // to avoid a hot loop, and to allow our node script to
     });                                     // process asynchronous requests in the meantime.
                                             // If you're also serving http, display a 503 error.
     connection.on('error', function(err) {
@@ -75,15 +76,15 @@ try{
       }
     });
   }
-  
+
   handleDisconnect();
 
 }
 catch 
 {
-
+ 
 }
-}, 60000);  
+}, 1000);  
 
 
 // Perfil del  bot 
@@ -1707,7 +1708,7 @@ if (message.content.startsWith(prefix + "feedback")) {
 
 
 
-Client.login(process.env.TOKEN); 
+Client.login("NzY0NzIxMDA3NzQyOTQzMjMy.X4KX8A.PWNlbeLA9FNg9kBaGdncLS_j_cg"); 
 
 
 
